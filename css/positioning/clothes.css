@@ -1,3 +1,5 @@
+
+
 #octopus {
 	margin: 55px;
 	margin-left: 650px ;
@@ -7,4 +9,10 @@
 	position: absolute;
 	top: 0;
 	left: 640px;
+}
+
+#glasses {
+	position: absolute;
+	top: 161px;
+	left: 700px;
 }
