@@ -13,10 +13,13 @@ adoption_candidate = gets.chomp
 
 puts "What is the estimated age of this hamster?"
 age = gets.chomp
-age = age.to_i
-if age == ""
-	age = nil
-else
-	p age
-end
+age = age.to_i # Converts the age of the hamster from a 
+				# string to an integer
+# The if statement below is to set the value of age to nil
+# if the user did not provide an age
+	if age == ""
+		age = nil
+	else
+		p age
+	end
 
