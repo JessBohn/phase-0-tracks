@@ -1,6 +1,7 @@
 puts "What is the hamster's name?"
 hamster_name = gets.chomp
 
+
 puts "How loud is this hamster on a scale from 1 to 10?"
 volume = gets.chomp
 volume = volume.to_i
@@ -9,7 +10,15 @@ puts "What is the color of this hamster's fur?"
 fur_color = gets.chomp
 
 puts "Is this hamster a good candidate for adoption? (y/n)"
-adoption_candidate = gets.chomp
+candidate_input = gets.chomp
+if candidate_input == "y"
+	adoption_candidate = true
+	puts "This hamster is a good candidate for adoption, yay!"
+else
+	adoption_candidate = false
+	puts "This hamster will not be put up for adoption :("
+end	
+
 
 puts "What is the estimated age of this hamster?"
 age = gets.chomp
