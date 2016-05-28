@@ -1,5 +1,5 @@
 puts "What is the hamster's name?"
-name = gets.chomp
+hamster_name = gets.chomp
 
 puts "How loud is this hamster on a scale from 1 to 10?"
 volume = gets.chomp
@@ -16,7 +16,7 @@ age = gets.chomp
 age = age.to_i # Converts the age of the hamster from a 
 				# string to an integer
 # The if statement below is to set the value of age to nil
-# if the user did not provide an age
+# if the user did not provide an age  
 	if age == ""
 		age = nil
 	else
