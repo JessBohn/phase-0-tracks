@@ -38,6 +38,8 @@ if employee_age === given_age && (likes_garlic || health_insurance)
 	puts "Probably not a vampire."
 elsif !(employee_age === given_age) && ( !likes_garlic || !health_insurance)
 	puts "Probably a vampire."
+elsif !(employee_age === given_age) && ( !likes_garlic && !health_insurance)
+	puts "Most certainly a vampire."
 else 
 	puts "Results inconclusive"
 end
