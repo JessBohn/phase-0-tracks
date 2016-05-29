@@ -6,11 +6,12 @@ puts "What is your name?"
 employee_name = gets.chomp
 
 puts "How old are you?"
-employee_age = gets.chomp
-employee_age = employee_age.to_i
+given_age = gets.chomp
+given_age = given_age.to_i
 print "What year were you born?"
 birth_year = gets.chomp
 birth_year = birth_year.to_i
+employee_age = 2016 - birth_year
 
 puts "Our company cafeteria serves garlic bread.
 		Should we order some for you?"
