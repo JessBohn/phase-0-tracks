@@ -16,7 +16,20 @@ employee_age = 2016 - birth_year
 puts "Our company cafeteria serves garlic bread.
 		Should we order some for you?"
 likes_garlic = gets.chomp
+if likes_garlic == "yes"
+	likes_garlic = true
+else
+	likes_garlic = false
+end
 
 puts "Would you like to enroll in the company's health insurance?"
 health_insurance = gets.chomp
+if health_insurance == "yes"
+	health_insurance = true
+else
+	health_insurance = false
+end
 
+when given_age == employee_age && (likes_garlic || health_insurance)
+	puts "Probably not a vampire."
+end
