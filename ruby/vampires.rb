@@ -10,7 +10,8 @@ print "How many new employees will be entered?"
 new_employees = gets.chomp
 new_employees = new_employees.to_i # Converts # of employees to an integer so that it can be processed in the loop
 
-until new_employees == 0
+until new_employees == 0 # Will run the below loop until the number of employees
+							# to be entered equals zero
 
 	print "What is your name? "
 	employee_name = gets.chomp
@@ -58,7 +59,8 @@ until new_employees == 0
 		puts "Results inconclusive"
 	end
 
-	new_employees = new_employees - 1
+	new_employees = new_employees - 1 # Lowered the number of employees to be entered by one
+										# to continue the loop for all necessary entries
 end
 
 puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
