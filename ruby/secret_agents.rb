@@ -55,20 +55,34 @@ end
 
 ### DRIVER CODE 
 
-encrypted = encrypt('yo mama')
-puts "answer: #{encrypted}"
+# Ask user whether they want to encrypt or decrypt i.e. which method to call
+puts "Would you like to decrypt or encrypt a password?"
+choice = gets.chomp
+# Ask user for password = string input for method
+puts "Enter the string you would like to #{choice}"
+password = gets.chomp
+# Call appropriate method and prints results then exits
 
-decrypted = decrypt("zp nbnb")
-puts "answer: #{decrypted}"
+p send(choice,password)
 
-puts encrypt("abc")
-puts encrypt("zed")
-puts decrypt("bcd")
-puts decrypt("afe")
 
-puts "\nNested call! "
 
-puts "answer: #{decrypt(encrypt("swordfish"))}"
+
+
+# encrypted = encrypt('yo mama')
+# puts "answer: #{encrypted}"
+
+# decrypted = decrypt("zp nbnb")
+# puts "answer: #{decrypted}"
+
+# puts encrypt("abc")
+# puts encrypt("zed")
+# puts decrypt("bcd")
+# puts decrypt("afe")
+
+# puts "\nNested call! "
+
+# puts "answer: #{decrypt(encrypt("swordfish"))}"
 
 # This nested call works because ruby interprets the calls from the inside
 # out. i.e. - it encrypts "swordfish" and returns the encrypted 
