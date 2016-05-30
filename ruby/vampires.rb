@@ -59,6 +59,17 @@ until new_employees == 0 # Will run the below loop until the number of employees
 		puts "Results inconclusive"
 	end
 
+	puts "Please list all of your current allergies"
+	allergy_input = gets.chomp
+
+	until allergy_input == "sunshine"
+		until allergy_input == "done"
+			print ""
+			allergy_input = gets.chomp
+		end
+		puts "Probably a vampire"
+	end
+
 	new_employees = new_employees - 1 # Lowered the number of employees to be entered by one
 										# to continue the loop for all necessary entries
 end
