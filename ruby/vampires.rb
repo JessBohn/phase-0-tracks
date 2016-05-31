@@ -2,7 +2,9 @@
 # 05/29/2016
 # 4.4 Solo Challenge
 
-# NEED TO ADD NAME CONDITION
+# I am completely unsure of how to tell this program to check for suspicious names and then print the output of "Definitely a vampire"
+# Do I run their name through some sort of weird sequence to check it out or do I ask the user if it just seems suspicious
+# to them personally. 
 
 
 print "How many new employees will be entered? "
@@ -55,7 +57,9 @@ until new_employees == 0 # Will run the below loop until the number of employees
 	elsif employee_age != given_age && ( !likes_garlic && !health_insurance) # if the ages ARE NOT equal AND the employee doesn't like garlic AND declined insurance
 		puts "Most certainly a vampire." #Could not figure out how to get the program to use the latest condition
 											# matched instead of the first, therefore my program will currently never output this result since the above elsif
-											# will have already been met
+	# elsif condition										# will have already been met
+	# 	puts "Definitely a vampire"		# This is where I am guessing my suspcious name condtion would go
+											# However, if we were asking the use their opinion we would have to input a question				
 	else 
 		puts "Results inconclusive"
 	end
