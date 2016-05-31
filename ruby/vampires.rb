@@ -54,7 +54,9 @@ until new_employees == 0 # Will run the below loop until the number of employees
 	elsif employee_age != given_age && ( !likes_garlic || !health_insurance) # if the ages ARE NOT equal AND the employee doesn't like garlic or declined insurance
 		puts "Probably a vampire."													# they probably ARE a vampire
 	elsif employee_age != given_age && ( !likes_garlic && !health_insurance) # if the ages ARE NOT equal AND the employee doesn't like garlic AND declined insurance
-		puts "Most certainly a vampire."											# they are MOST CERTAINLY a vampire
+		puts "Most certainly a vampire." #Could not figure out how to get the program to use the latest condition
+											# matched instead of the first, therefore my program will currently never output this result since the above elsif
+											# will have already been met
 	else 
 		puts "Results inconclusive"
 	end
@@ -62,15 +64,16 @@ until new_employees == 0 # Will run the below loop until the number of employees
 	puts "Please list all of your current allergies"
 	allergy_input = gets.chomp
 
-	# until allergy_input == "sunshine"
-	# 	if allergy_input == "done"
-	# 		print ""
-	# 	else
-	# 		allergy_input = gets.chomp
-	# 	end
+	until allergy_input == "sunshine"
+		if allergy_input != "done"
+			print ""
+			allergy_input = gets.chomp
+		else
+			puts ""
+		end
 		
-	# 	puts "Probably a vampire"
-	# end
+		puts "Probably a vampire"
+	end
 
 	new_employees = new_employees - 1 # Lowered the number of employees to be entered by one
 										# to continue the loop for all necessary entries
