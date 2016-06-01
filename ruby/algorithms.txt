@@ -1,0 +1,26 @@
+Jessica Bohn
+5/31/2016		
+
+How to Use an Elevator
+- Walk up to the elevator
+- Locate the up/down arrow buttons
+	- Ask which floor the robot needs to go to
+	- Calculate whether the robot needs to push the up or the down arrow
+		- Use current floor (initial floor = 0) and floor needed to calculate
+		- If floor needed - current floor is < 0
+			- Push down arrow
+		- If floor needed - current floor > 0
+			- push up arrow
+		- Else
+			Ask again
+- Wait patiently until elevator arrives
+- Once doors open walk straight into elevator
+- Locate the floor buttons
+ 	- Push the number eqivalent to the floor needed
+- Ride the elevator until the floor counter reaches your desired floor
+	- When other people are in the elevator do not leave the elevator until
+		your floor number has been reached
+- Wait for the doors to open
+- Walk straight out onto your desired floor!
+
+
