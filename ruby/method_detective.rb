@@ -7,7 +7,8 @@
 # "iNvEsTiGaTiOn".<???>
 # => “InVeStIgAtIoN”
 
-# "zom".<???>
+p "zom".insert(1, 'o') # .insert(index, other_str) - Inserts the other_str before the character at the given index
+p "zom".insert(2, 'o')
 # => “zoom”
 
 p "enhance".center(15)
@@ -16,7 +17,8 @@ p "enhance".center(15)
 # "Stop! You’re under arrest!".uppercase
 # => "STOP! YOU’RE UNDER ARREST!"
 
-# "the usual".<???>
+p "the usual".ljust(18, ' suspects') # Since the integer, 18, is greater than the length of the string, a new str of length integer, 18, 
+										# is returned with original str left justified and padded with padstr ( suspects)
 #=> "the usual suspects"
 
 # " suspects".<???>
@@ -41,7 +43,5 @@ p "z".gsub(/./) {|s| s.ord.to_s}
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
 
-
-
-# "How many times does the letter 'a' appear in this string?".
+# "How many times does the letter 'a' appear in this string?"
 # => 4
