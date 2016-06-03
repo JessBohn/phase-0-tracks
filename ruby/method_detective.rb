@@ -14,7 +14,7 @@ p "zom".insert(2, 'o')
 p "enhance".center(15)
 # => "    enhance    "
 
-# "Stop! You’re under arrest!".uppercase
+p "Stop! You’re under arrest!".upcase # Makes all characters uppercase
 # => "STOP! YOU’RE UNDER ARREST!"
 
 p "the usual".ljust(18, ' suspects') # Since the integer, 18, is greater than the length of the string, a new str of length integer, 18, 
