@@ -32,9 +32,12 @@ p "The case of the disappearing last letter".chop
 # => "Elementary, my dear Watson!"
 
 p "z".each_byte {|c| print c, ' ' }
+p "z".each_codepoint {|c| print c, ' '}
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
-# Passes each byte in str to the given block
+# .each_byte - Passes each byte in str to the given block
+# .each_codepoint - Passes the integer ordinal, or codepoint, of each character in str i.e. number place within the stored list of characters in Unicode
+
 
 # "How many times does the letter 'a' appear in this string?".<???>
 # => 4
