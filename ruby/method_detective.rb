@@ -25,16 +25,16 @@ p "the usual".ljust(18, ' suspects') # Since the integer, 18, is greater than th
 p " suspects".insert(-10, 'the usual') # When using the negative index it inserts other_str after given index
 p " suspects".insert(0, 'the usual')
 p " suspects".rjust(18, 'the usual') # Functions just as ljust, but right justifies str and adds padstr before original str
-
 # => "the usual suspects"
 
 p "The case of the disappearing last letter".chop
 # => "The case of the disappearing last lette"
 
-# "The mystery of the missing first letter".<???>
+p "The mystery of the missing first letter".slice!(1..39) # Removes characters corresponding to indexes 1 -> 38 and returns the removed portion
+
 # => "he mystery of the missing first letter"
 
-# "Elementary,    my   dear        Watson!".<???>
+p "Elementary,    my   dear        Watson!".squeeze(" ") # Removes any repeating instances of " " (the space) to "squeeze" it
 # => "Elementary, my dear Watson!"
 
 p "z".each_byte {|c| print c, ' ' }
