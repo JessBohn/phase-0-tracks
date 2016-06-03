@@ -24,6 +24,8 @@ p "the usual".ljust(18, ' suspects') # Since the integer, 18, is greater than th
 
 p " suspects".insert(-10, 'the usual') # When using the negative index it inserts other_str after given index
 p " suspects".insert(0, 'the usual')
+p " suspects".rjust(18, 'the usual') # Functions just as ljust, but right justifies str and adds padstr before original str
+
 # => "the usual suspects"
 
 p "The case of the disappearing last letter".chop
