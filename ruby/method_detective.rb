@@ -15,6 +15,7 @@ p "enhance".center(15)
 # => "    enhance    "
 
 p "Stop! You’re under arrest!".upcase # Makes all characters uppercase
+p "Stop! You’re under arrest!".upcase! # Same as above, but would return nil if nothing changed
 # => "STOP! YOU’RE UNDER ARREST!"
 
 p "the usual".ljust(18, ' suspects') # Since the integer, 18, is greater than the length of the string, a new str of length integer, 18, 
