@@ -10,10 +10,10 @@
 # "zom".<???>
 # => “zoom”
 
-# "enhance".<???>
+p "enhance".center(15)
 # => "    enhance    "
 
-# "Stop! You’re under arrest!".<???>
+# "Stop! You’re under arrest!".uppercase
 # => "STOP! YOU’RE UNDER ARREST!"
 
 # "the usual".<???>
@@ -22,7 +22,7 @@
 # " suspects".<???>
 # => "the usual suspects"
 
-# "The case of the disappearing last letter".uppercase
+# "The case of the disappearing last letter"
 # => "The case of the disappearing last lette"
 
 # "The mystery of the missing first letter".<???>
