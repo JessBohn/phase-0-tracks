@@ -19,9 +19,11 @@ p "enhance".center(15)
 
 p "the usual".ljust(18, ' suspects') # Since the integer, 18, is greater than the length of the string, a new str of length integer, 18, 
 										# is returned with original str left justified and padded with padstr ( suspects)
+
 #=> "the usual suspects"
 
-# " suspects".<???>
+p " suspects".insert(-10, 'the usual') # When using the negative index it inserts other_str after given index
+p " suspects".insert(0, 'the usual')
 # => "the usual suspects"
 
 p "The case of the disappearing last letter".chop
