@@ -31,9 +31,10 @@ p "The case of the disappearing last letter".chop
 # "Elementary,    my   dear        Watson!".<???>
 # => "Elementary, my dear Watson!"
 
-# "z".<???>
+p "z".each_byte {|c| print c, ' ' }
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
+# Passes each byte in str to the given block
 
 # "How many times does the letter 'a' appear in this string?".<???>
 # => 4
