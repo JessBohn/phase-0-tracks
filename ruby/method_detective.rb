@@ -4,7 +4,7 @@
 # When there's more than one suspect who could have
 # committed the crime, add additional calls to prove it.
 
-# "iNvEsTiGaTiOn".<???>
+p "iNvEsTiGaTiOn".swapcase # Converts each case to the other upper to lower & lower to upper
 # => “InVeStIgAtIoN”
 
 p "zom".insert(1, 'o') # .insert(index, other_str) - Inserts the other_str before the character at the given index
@@ -19,7 +19,6 @@ p "enhance".center(15)
 
 p "the usual".ljust(18, ' suspects') # Since the integer, 18, is greater than the length of the string, a new str of length integer, 18, 
 										# is returned with original str left justified and padded with padstr ( suspects)
-
 #=> "the usual suspects"
 
 p " suspects".insert(-10, 'the usual') # When using the negative index it inserts other_str after given index
