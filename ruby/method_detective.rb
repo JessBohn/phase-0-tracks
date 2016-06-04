@@ -28,6 +28,7 @@ p " suspects".rjust(18, 'the usual') # Functions just as ljust, but right justif
 # => "the usual suspects"
 
 p "The case of the disappearing last letter".chop
+# p "The case of the disappearing last letter"
 # => "The case of the disappearing last lette"
 
 p "The mystery of the missing first letter".slice!(1..39) # Removes characters corresponding to indexes 1 -> 38 and returns the removed portion
@@ -47,5 +48,5 @@ p "z".gsub(/./) {|s| s.ord.to_s}
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
 
-# "How many times does the letter 'a' appear in this string?"
+p "How many times does the letter 'a' appear in this string?".count('a') # Count the number of instances of other_str, a here, within original str
 # => 4
