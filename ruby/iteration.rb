@@ -22,3 +22,30 @@ list_of_animals.map! do |animal|
 end
 puts "After .map say:"
 p list_of_animals 
+
+numbers = [34, 57, 72, 92, 15, 46, 24, 58, 12, 6, 66]
+numbers_hash = {
+    34 => "thirty-four",
+    57 => "fifty-seven",
+    72 => "seventy-two",
+    92 => "ninety-two",
+    15 => "fifteen",
+    46 => "fourty-six",
+    24 => "twenty-four",
+    58 => "fifty-eight",
+    12 => "twelve",
+    6 => "six",
+    66 => "sixty-six"
+}
+
+p numbers.delete_if {|number| number > 80}
+p numbers_hash.delete_if {|integer, word| word == "seventy-two"}
+
+p numbers.keep_if {|number| number.even?}
+p numbers_hash.keep_if {|integer, word| integer < 70}
+
+p numbers.select {|number| number < 60}
+p numbers_hash.select {|integer, word| integer < 60}
+
+p numbers.take_while {|number| number > 10}
+p numbers_hash.take_while {|integer, number| integer > 10}
