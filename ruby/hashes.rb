@@ -13,3 +13,10 @@
 	# Have they ever watched someone else's pet
 	# End - whether they can be my pet sitter or not
 
+pet_sitting_applicant = {}
+p pet_sitting_applicant
+puts "What is the applicant's name?"
+name = gets.chomp
+p pet_sitting_applicant
+pet_sitting_applicant[:name] = name
+p pet_sitting_applicant
