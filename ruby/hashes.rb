@@ -79,8 +79,12 @@ p pet_sitting_applicant
 		puts "I'm sorry, but I cannot take you as my pet sitter. I prefer someone with more experience dealing with animals."
 		pet_sitting_applicant[:hired] = false
 	else
-		puts "Congratulations, I would love to hire you as my new pet sitter!"
+		puts "Congratulations, I would love to hire you as my new pet sitter! What is your phone number? (Digits only, please)"
+		applicant_phone_num = gets.chomp
+		applicant_phone_num = applicant_phone_num.to_i
 		pet_sitting_applicant[:hired] = true
+		pet_sitting_applicant[:applicant_phone_num] = applicant_phone_num
+	end
 
 p pet_sitting_applicant
 
