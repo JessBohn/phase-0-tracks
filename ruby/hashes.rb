@@ -27,10 +27,10 @@ name = gets.chomp
 pet_sitting_applicant[:name] = name
 
 
-puts "How old are you?"
-age = gets.chomp
-age = age.to_i
-pet_sitting_applicant[:age] = age
+puts "How old are you?" 
+age = gets.chomp # Collect applicant's age
+age = age.to_i # Convert string to an integer
+pet_sitting_applicant[:age] = age # Initiate :age key in hash with value of age given
 
 
 puts "What is your all-time favorite animal?"
@@ -69,7 +69,11 @@ previous_petsitter = gets.chomp
 	end
 
 
-if allergic_to_animal == "cats" || allergic_to_animal == "dogs"
+
+if age < 18
+	puts "I'm sorry, but I cannot take you as my pet sitter. I would like someone who is at least 18."
+	pet_sitting_applicant[:hired] = false
+elsif allergic_to_animal == "cats" || allergic_to_animal == "dogs"
 	puts "I'm sorry, but I cannot take you as my pet sitter. I own both cats and dogs"
 	pet_sitting_applicant[:hired] = false
 elsif !pet_sitting_applicant[:has_pets] && !pet_sitting_applicant[:previous_petsitter]
