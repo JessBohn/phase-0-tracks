@@ -69,5 +69,19 @@ previous_petsitter = gets.chomp
 	else
 		pet_sitting_applicant[:previous_petsitter] = false
 	end
+
 p pet_sitting_applicant
 
+	if allergic_to_animal == "cats" || allergic_to_animal == "dogs"
+		puts "I'm sorry, but I cannot take you as my pet sitter. I own both cats and dogs"
+		pet_sitting_applicant[:hired] = false
+	elsif !pet_sitting_applicant[:has_pets] && !pet_sitting_applicant[:previous_petsitter]
+		puts "I'm sorry, but I cannot take you as my pet sitter. I prefer someone with more experience dealing with animals."
+		pet_sitting_applicant[:hired] = false
+	else
+		puts "Congratulations, I would love to hire you as my new pet sitter!"
+		pet_sitting_applicant[:hired] = true
+
+p pet_sitting_applicant
+
+puts "Thank you for taking the time to fill out this application!"
