@@ -62,6 +62,9 @@ p the_bohn_residence['Garage'].reverse
 # I folded my laundry and put it away, so we don't need that anymore
 p the_bohn_residence['Jess Room'].delete_at(4)
 
+# Is Zeus with my mom in her office
+p the_bohn_residence['Julie Office'].include?('Zeus')
+
 # Our dog Zeus is always with my mom so he needs to be with her
 p the_bohn_residence['Julie Office'].push('Zeus')
 
