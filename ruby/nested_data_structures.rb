@@ -13,8 +13,8 @@ the_bohn_residence = {
 		'James'],
 	'Kitchen' => [
 		'leaky refrigerator',
-		 'electric stove',
-		 'pantry'],
+		'electric stove',
+		'pantry'],
 	'Julie Office' => [
 		'Julie',
 		'large fancy desk',
@@ -53,4 +53,11 @@ p the_bohn_residence['Jess Room'].push('Jess')
 # Mispelled my cat's name, have to correct it to be punny
 p the_bohn_residence['Jess Room'][1][1] = 'The Great Catsby'
 
+# Reverse order of items in garage to represent importance
 p the_bohn_residence['Garage'].reverse
+
+# I folded my laundry and put it away, so we don't need that anymore
+p the_bohn_residence['Jess Room'].delete_at(4)
+
+# Our dog Zeus is always with my mom so he needs to be with her
+p the_bohn_residence['Julie Office'].push('Zeus')
