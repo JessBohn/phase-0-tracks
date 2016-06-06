@@ -6,10 +6,13 @@
 # Must implement all important questions 
 	# Name
 	# Age
-	# Address
 	# All-time favorite animal
-	# How many pets do they have
-	# What kind of pets do they have
+	# Do they have any pets
+		# If yes
+			# How many pets do they have
+			# What kind of pets do they have
+		# Else 
+			# end - continue on
 	# Are they allergic to any animals? (If yes, please list which animal you are allergic to)
 	# Have they ever watched someone else's pet
 	# End - whether they can be my pet sitter or not
@@ -35,3 +38,16 @@ fave_animal = gets.chomp
 pet_sitting_applicant[:fave_animal] = fave_animal
 p pet_sitting_applicant
 
+puts "Do you have any pets?"
+has_pets = gets.chomp
+	if has_pets == "yes"
+		pet_sitting_applicant[:has_pets] = true
+		puts "How many pets do you have?"
+		num_of_pets = gets.chomp
+		num_of_pets = num_of_pets.to_i
+		pet_sitting_applicant[:num_of_pets] = num_of_pets
+	else
+		pet_sitting_applicant[:has_pets] = false
+	end
+
+p pet_sitting_applicant
