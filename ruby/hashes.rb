@@ -3,6 +3,7 @@
 
 # I will be writing an application for a pet sitter
 
+# Written as if applicant is directly filling it out
 # Must implement all important questions 
 	# Name
 	# Age
@@ -14,8 +15,10 @@
 			# end - continue on
 	# Are they allergic to any animals? (If yes, please list which animal you are allergic to)
 	# Have they ever watched someone else's pet
-	# End - whether they can be my pet sitter or not
-# Written as if applicant is directly filling it out
+	# End - 
+		# Use conditional statements to determine
+		# whether they can be my pet sitter or not
+
 
 pet_sitting_applicant = {}
 p pet_sitting_applicant
@@ -58,3 +61,13 @@ allergic_to_animal = gets.chomp
 		pet_sitting_applicant[:allergic_to_animal] = true
 	end
 p pet_sitting_applicant
+
+puts "Have you ever been a pet sitter for someone else before?"
+previous_petsitter = gets.chomp
+	if previous_petsitter == "yes"
+		pet_sitting_applicant[:previous_petsitter] = true
+	else
+		pet_sitting_applicant[:previous_petsitter] = false
+	end
+p pet_sitting_applicant
+
