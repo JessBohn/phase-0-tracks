@@ -15,12 +15,13 @@ the_bohn_residence = {
 		'leaky refrigerator',
 		 'electric stove',
 		 'pantry'],
-	'Julie Office' => ['
-		large fancy desk',
-		 'small fancy desk',
-		 'television', 
-		 'supply cabinet', 
-		 'files'],
+	'Julie Office' => [
+		'Julie'
+		'large fancy desk',
+		'small fancy desk',
+		'television', 
+		'supply cabinet', 
+		'files'],
 	'Garage' => [
 		'junk', 
 		'refrigerator', 
@@ -32,7 +33,13 @@ the_bohn_residence = {
 			'The Great Catsby'], 
 		'37-inch TV', 
 		'Xbox One', 
-		'unfolded laundry']
+		'unfolded laundry'],
+
+	'Parents Room' => [
+		'king size bed',
+		'televsion',
+		'Athena',
+		'walk-in closet']
 
 }
 
