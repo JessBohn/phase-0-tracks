@@ -20,25 +20,23 @@
 		# whether they can be my pet sitter or not
 
 
-pet_sitting_applicant = {}
-p pet_sitting_applicant
-
+pet_sitting_applicant = {} # Application is set to an empty hash
 
 puts "What is your name?"
 name = gets.chomp
 pet_sitting_applicant[:name] = name
-p pet_sitting_applicant
+
 
 puts "How old are you?"
 age = gets.chomp
 age = age.to_i
 pet_sitting_applicant[:age] = age
-p pet_sitting_applicant
+
 
 puts "What is your all-time favorite animal?"
 fave_animal = gets.chomp
 pet_sitting_applicant[:fave_animal] = fave_animal
-p pet_sitting_applicant
+
 
 puts "Do you have any pets?"
 has_pets = gets.chomp
@@ -51,7 +49,7 @@ has_pets = gets.chomp
 	else
 		pet_sitting_applicant[:has_pets] = false
 	end
-p pet_sitting_applicant
+
 
 puts "Are you allergic to any kind of animal. If yes, please list the animal?"
 allergic_to_animal = gets.chomp
@@ -60,7 +58,7 @@ allergic_to_animal = gets.chomp
 	else
 		pet_sitting_applicant[:allergic_to_animal] = true
 	end
-p pet_sitting_applicant
+
 
 puts "Have you ever been a pet sitter for someone else before?"
 previous_petsitter = gets.chomp
@@ -70,21 +68,20 @@ previous_petsitter = gets.chomp
 		pet_sitting_applicant[:previous_petsitter] = false
 	end
 
-p pet_sitting_applicant
 
-	if allergic_to_animal == "cats" || allergic_to_animal == "dogs"
-		puts "I'm sorry, but I cannot take you as my pet sitter. I own both cats and dogs"
-		pet_sitting_applicant[:hired] = false
-	elsif !pet_sitting_applicant[:has_pets] && !pet_sitting_applicant[:previous_petsitter]
-		puts "I'm sorry, but I cannot take you as my pet sitter. I prefer someone with more experience dealing with animals."
-		pet_sitting_applicant[:hired] = false
-	else
-		puts "Congratulations, I would love to hire you as my new pet sitter! What is your phone number? (Digits only, please)"
-		applicant_phone_num = gets.chomp
-		applicant_phone_num = applicant_phone_num.to_i
-		pet_sitting_applicant[:hired] = true
-		pet_sitting_applicant[:applicant_phone_num] = applicant_phone_num
-	end
+if allergic_to_animal == "cats" || allergic_to_animal == "dogs"
+	puts "I'm sorry, but I cannot take you as my pet sitter. I own both cats and dogs"
+	pet_sitting_applicant[:hired] = false
+elsif !pet_sitting_applicant[:has_pets] && !pet_sitting_applicant[:previous_petsitter]
+	puts "I'm sorry, but I cannot take you as my pet sitter. I prefer someone with more experience dealing with animals."
+	pet_sitting_applicant[:hired] = false
+else
+	puts "Congratulations, I would love to hire you as my new pet sitter! What is your phone number? (Digits only, please)"
+	applicant_phone_num = gets.chomp
+	applicant_phone_num = applicant_phone_num.to_i
+	pet_sitting_applicant[:hired] = true
+	pet_sitting_applicant[:applicant_phone_num] = applicant_phone_num
+end
 
 p pet_sitting_applicant
 
