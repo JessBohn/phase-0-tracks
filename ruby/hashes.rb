@@ -10,6 +10,7 @@
 	# All-time favorite animal
 	# How many pets do they have
 	# What kind of pets do they have
+	# Are they allergic to any animals? (If yes, please list which animal you are allergic to)
 	# Have they ever watched someone else's pet
 	# End - whether they can be my pet sitter or not
 # Written as if applicant is directly filling it out
@@ -28,3 +29,9 @@ age = gets.chomp
 age = age.to_i
 pet_sitting_applicant[:age] = age
 p pet_sitting_applicant
+
+puts "What is your all-time favorite animal?"
+fave_animal = gets.chomp
+pet_sitting_applicant[:fave_animal] = fave_animal
+p pet_sitting_applicant
+
