@@ -16,7 +16,7 @@ the_bohn_residence = {
 		 'electric stove',
 		 'pantry'],
 	'Julie Office' => [
-		'Julie'
+		'Julie',
 		'large fancy desk',
 		'small fancy desk',
 		'television', 
@@ -30,7 +30,7 @@ the_bohn_residence = {
 	'Jess Room' => [
 		'queen size bed', 
 		['Lambda Lambda Lambda', 
-			'The Great Catsby'], 
+			'The Great Gatsby'], 
 		'37-inch TV', 
 		'Xbox One', 
 		'unfolded laundry'],
@@ -46,3 +46,9 @@ the_bohn_residence = {
 p the_bohn_residence
 
 p the_bohn_residence['Jess Room'][1][0]
+
+# Add myself to my own room
+p the_bohn_residence['Jess Room'].push('Jess')
+
+# Mispelled my cat's name, have to correct it to be punny
+p the_bohn_residence['Jess Room'][1][1] = 'The Great Catsby'
