@@ -18,13 +18,19 @@ p last_first = last_first.join(' ')
 def next_vowel(str)
   vowels = ["a", "e", "i", "o", "u"]
   str = str.split('')
-  name_adv_vowels = str.map do |vowel|
-    if vowels.include?(vowel)
-      vowels.rotate(1)[vowels.index(vowel)]
+  name_adv_vowels = str.map do |letter|
+    if vowels.include?(letter)
+      vowels.rotate(1)[vowels.index(letter)]
     else
-      vowel
+      letter
     end
   end
   name_adv_vowels.join
 end
 p next_vowel(last_first)
+
+def next_consonant(str)
+	alphabet = ("a".."z").to_a
+	vowels = ["a", "e", "i", "o", "u"]
+	consonants = alphabet - vowels
+end
