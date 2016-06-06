@@ -67,6 +67,10 @@ p the_bohn_residence['Julie Office'].include?('Zeus')
 
 # Our dog Zeus is always with my mom so he needs to be with her
 p the_bohn_residence['Julie Office'].push('Zeus')
+p the_bohn_residence['Julie Office'].include?('Zeus')
 
 # Push combine both arrays for key 'Jess Room'
 p the_bohn_residence['Jess Room'].flatten
+
+# Did I include any bathrooms?
+p the_bohn_residence.key?('Bathroom')
