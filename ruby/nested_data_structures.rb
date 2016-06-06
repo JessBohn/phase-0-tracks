@@ -52,3 +52,5 @@ p the_bohn_residence['Jess Room'].push('Jess')
 
 # Mispelled my cat's name, have to correct it to be punny
 p the_bohn_residence['Jess Room'][1][1] = 'The Great Catsby'
+
+p the_bohn_residence['Garage'].reverse
