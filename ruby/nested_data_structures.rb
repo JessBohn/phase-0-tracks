@@ -47,6 +47,9 @@ p the_bohn_residence
 
 p the_bohn_residence['Jess Room'][1][0]
 
+# How many items are in the kitchen
+p the_bohn_residence['Kitchen'].length
+
 # Add myself to my own room
 p the_bohn_residence['Jess Room'].push('Jess')
 
@@ -61,3 +64,6 @@ p the_bohn_residence['Jess Room'].delete_at(4)
 
 # Our dog Zeus is always with my mom so he needs to be with her
 p the_bohn_residence['Julie Office'].push('Zeus')
+
+# Push combine both arrays for key 'Jess Room'
+p the_bohn_residence['Jess Room'].flatten
