@@ -74,3 +74,9 @@ p the_bohn_residence['Jess Room'].flatten
 
 # Did I include any bathrooms?
 p the_bohn_residence.key?('Bathroom')
+
+# List rooms included
+p the_bohn_residence.keys
+
+# List items in the rooms
+p the_bohn_residence.values
