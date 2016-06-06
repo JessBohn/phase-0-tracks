@@ -5,17 +5,22 @@
 # Swap first and last name
 # change each of its vowels to the next one in the order [aeiou]
 # change the consonants to the next in the alphabet
-agent_real_name = ''
+input = ''
+matching_identities = {
+	'real name' => [],
+	'fake name' => []
+}
 
-until agent_real_name == "quit"
+until input == "quit"
 	puts "Hello, what is your name?"
 	agent_real_name = gets.chomp
+	matching_identities['real name'].push(agent_real_name)
 	agent_real_name = agent_real_name.downcase
 	agent_real_name = agent_real_name.split(' ')
 
 	# Use the .reverse method to swap the order of the items (names) in the array
-	p last_first = agent_real_name.reverse
-	p last_first = last_first.join(' ')
+	last_first = agent_real_name.reverse
+	last_first = last_first.join(' ')
 
 
 	def new_agent_name(str)
@@ -37,9 +42,10 @@ until agent_real_name == "quit"
 
 	proper_new_agent_name = new_agent_name(last_first).capitalize!  # Yes this only capitalizes the first name...
 	puts "Your new fake agent name is #{proper_new_agent_name}!"
-	agent_real_name = gets.chomp
+	matching_identities['fake name'].push(proper_new_agent_name)
+	input = gets.chomp
 end
-
+p matching_identities.each {|name| puts "#{name}"}
 
 
 
