@@ -10,7 +10,6 @@
 	# Do they have any pets
 		# If yes
 			# How many pets do they have
-			# What kind of pets do they have
 		# Else 
 			# end - continue on
 	# Are they allergic to any animals? (If yes, please list which animal you are allergic to)
@@ -49,5 +48,13 @@ has_pets = gets.chomp
 	else
 		pet_sitting_applicant[:has_pets] = false
 	end
+p pet_sitting_applicant
 
+puts "Are you allergic to any kind of animal. If yes, please list the animal?"
+allergic_to_animal = gets.chomp
+	if allergic_to_animal == "no"
+		pet_sitting_applicant[:allergic_to_animal] = false
+	else
+		pet_sitting_applicant[:allergic_to_animal] = true
+	end
 p pet_sitting_applicant
