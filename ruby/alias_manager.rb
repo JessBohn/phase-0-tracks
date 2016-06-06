@@ -5,35 +5,40 @@
 # Swap first and last name
 # change each of its vowels to the next one in the order [aeiou]
 # change the consonants to the next in the alphabet
+agent_real_name = ''
 
-agent_real_name = "Felicia Torres".downcase
-agent_real_name = agent_real_name.split(' ')
+until agent_real_name == "quit"
+	puts "Hello, what is your name?"
+	agent_real_name = gets.chomp
+	agent_real_name = agent_real_name.downcase
+	agent_real_name = agent_real_name.split(' ')
 
-# Use the .reverse method to swap the order of the items (names) in the array
-p last_first = agent_real_name.reverse
-p last_first = last_first.join(' ')
+	# Use the .reverse method to swap the order of the items (names) in the array
+	p last_first = agent_real_name.reverse
+	p last_first = last_first.join(' ')
 
 
-def new_agent_name(str)
-	alphabet = ("a".."z").to_a
-	vowels = ["a", "e", "i", "o", "u"]
-	consonants = alphabet - vowels
-	str = str.split('')
-  	name_adv_letters = str.map do |letter|
-	    if vowels.include?(letter)
-      		vowels.rotate(1)[vowels.index(letter)]
-	    elsif consonants.include?(letter)
-	      consonants.rotate(1)[consonants.index(letter)]
-	  	else
-	  		letter
-	    end
-  end
-  name_adv_letters.join
+	def new_agent_name(str)
+		alphabet = ("a".."z").to_a
+		vowels = ["a", "e", "i", "o", "u"]
+		consonants = alphabet - vowels
+		str = str.split('')
+	  	name_adv_letters = str.map do |letter|
+		    if vowels.include?(letter)
+	      		vowels.rotate(1)[vowels.index(letter)]
+		    elsif consonants.include?(letter)
+		      consonants.rotate(1)[consonants.index(letter)]
+		  	else
+		  		letter
+		    end
+	  end
+	  name_adv_letters.join
+	end
+
+	proper_new_agent_name = new_agent_name(last_first).capitalize!  # Yes this only capitalizes the first name...
+	puts "Your new fake agent name is #{proper_new_agent_name}!"
+	agent_real_name = gets.chomp
 end
-
-p proper_new_agent_name = new_agent_name(last_first).capitalize!  # Yes this only capitalizes the first name...
-
-
 
 
 
