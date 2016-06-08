@@ -5,3 +5,12 @@
 # Puppy
 
 
+# Characterisitics (attributes) ------------
+# Name: varies
+# Color: varies
+# Tail length: varies
+# Friendly: yes
+# Playful: yes
+# Eye count: 2
+# Love queaky toys: yes
+
