@@ -12,5 +12,15 @@
 # Friendly: yes
 # Playful: yes
 # Eye count: 2
-# Love queaky toys: yes
+# Love squeaky toys: yes
+# Chases cats: no
 
+# Behavior ------------
+# Run
+# Jump
+# Fetch
+# Bark
+# Cry
+# Walk
+# Catch
+# Snuggle
