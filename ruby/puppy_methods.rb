@@ -7,3 +7,5 @@ class Puppy
 
 end
 
+sparky = Puppy.new
+sparky.fetch("ball")
