@@ -5,7 +5,14 @@ class Puppy
     toy
   end
 
+  def speak(x)
+  	x.to_i
+  	x.times { puts "Woof!" }
+  end
+
 end
 
 sparky = Puppy.new
 sparky.fetch("ball")
+
+sparky.speak(4)
