@@ -48,3 +48,23 @@ steps:
 output:
     -A prettyfied hash
 =end
+
+# Method to create a list
+#     -define #create_list
+# input: string of items separated by spaces (example: "carrots apples cereal pizza")
+# steps: 
+#   - Seperate items by spaces
+#   - Create a keys based on the string input
+#   - Value of keys would be the quantity needed of each key.
+#   - set default quantity
+#   print the list to the console [can you use one of your other methods here?]
+#   -call #print_method 
+# output: [what data type goes here, array or hash?]
+#     -hash
+
+def create_list(str)
+    grocery_list = {}
+    grocery_items = str.split(" ")
+    grocery_items.each {|grocery_items| grocery_list[:grocery_items] = 1}
+end
+create_list("apples oranges")
