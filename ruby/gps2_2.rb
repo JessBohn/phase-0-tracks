@@ -117,7 +117,15 @@ prettyfie_list($grocery_list)
     # thus returning the parameter it its new form. (Not the best description, I know)
 
 # What kinds of things can you pass into methods as arguments?
+    # You can pass lots of things into methods as arguments such as arrays,
+    # strings, hashes, integers, variables
 
 # How can you pass information between methods?
+    # You can pass information between methods by calling one method inside another
 
 # What concepts were solidified in this challenge, and what concepts are still confusing?
+    # I feel like my grasp on pseudocoding and its best practices have between
+    # solidified through this challenge, but we'll see about that. I also feel like
+    # have a more sound understanding of using multiple methods together to create
+    # a simpler and more stable code as well as with using arrays and hashes to organize
+    # my data properly.
