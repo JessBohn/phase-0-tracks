@@ -9,6 +9,9 @@ class Santa
 		@gender = gender
 		@ethnicity = ethnicity
 		puts "Initializing Santa instance..."
+		@age = 0
+		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", 
+			"Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 	end
 
 	# Define method for speak
@@ -27,10 +30,19 @@ class Santa
 
 end
 
+# Create an empty array for multiple santas
 santas = []
+# Create list of genders to be given to new santas
 santa_genders = ["female", "male", "cisgender", 
 	"agender", "bigender", "N/A", "gender fluid"]
+# Create matching list of ethnicities to go with above genders
 santa_ethnicities = ["Goddess", "Latino", "Centaur", "African-American",
 	"German", "American", "Canadian"]
-santa.speak
-santa.eat_milk_and_cookies("chocolate chip cookie")
+# Combine genders and ethnicities into array of santas
+santa_genders.length.times do |i|
+	santas << Santa.new(santa_genders[i], santa_ethnicities[i])
+end
+
+p santas
+# santa.speak
+# santa.eat_milk_and_cookies("chocolate chip cookie")
