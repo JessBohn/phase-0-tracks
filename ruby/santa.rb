@@ -27,7 +27,10 @@ class Santa
 		# Takes in a type of cookie as a parameter
 		# Prints the cookie in a sentence
 		puts "That was a good #{cookie}! The milk was delicious too!"
-		puts "#{@gender} #{@ethnicity}"
+	end
+	# Add method that ages a santa by one year
+	def celebrate_birthday
+		@age +=1
 	end
 
 end
@@ -44,6 +47,17 @@ santa_ethnicities = ["Goddess", "Latino", "Centaur", "African-American",
 santa_genders.length.times do |i|
 	santas << Santa.new(santa_genders[i], santa_ethnicities[i])
 end
+
+# Make each of the santas say the holiday greeeting
+# santas.each do |i|
+# 	i.speak
+# end
+# # Make each santa eat the cookie given
+# santas.each do |i|
+# 	i.eat_milk_and_cookies("chocolate")
+# end
+
+
 
 
 # santa.speak
