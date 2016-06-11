@@ -110,6 +110,11 @@ prettyfie_list($grocery_list)
     # and less clutter within the code.
     
 # What does a method return?
+    # (I am slightly confused by this question)
+    # A method returns whatever you have defined that method to return?
+    # It takes in the argument you have given it, passes it to the
+    # parameter and should then use the parameter as defined inside your method,
+    # thus returning the parameter it its new form. (Not the best description, I know)
 
 # What kinds of things can you pass into methods as arguments?
 
