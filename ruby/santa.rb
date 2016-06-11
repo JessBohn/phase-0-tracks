@@ -33,6 +33,16 @@ class Santa
 		@age +=1
 	end
 
+	# Add method that takes a specific reindeer as an argument
+	# and moves said reindeer to end of array
+	def get_mad_at(reindeer)
+		@reindeer_ranking.each do |name|
+  		until reindeer == name
+  			@reindeer_ranking.delete(name)
+  			@reindeer_ranking.push(name)
+  		end
+  		end
+	end
 end
 
 # Create an empty array for multiple santas
@@ -48,6 +58,14 @@ santa_genders.length.times do |i|
 	santas << Santa.new(santa_genders[i], santa_ethnicities[i])
 end
 
+
+
+
+
+
+
+
+# get_mad_at("Rudolph")
 # Make each of the santas say the holiday greeeting
 # santas.each do |i|
 # 	i.speak
