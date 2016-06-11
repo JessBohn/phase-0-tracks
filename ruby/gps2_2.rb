@@ -101,7 +101,14 @@ prettyfie_list($grocery_list)
     # challenge.
 
 # What are the tradeoffs of using arrays and hashes for this challenge?
-    # One of the tradeoffs of using arrays and hashes for this challenge is that
+    # One of the tradeoffs of using arrays and hashes for this challenge is that we
+    # can collect all of the desired items at once and simply sort them into an array
+    # by splitting them instead of having to store each one as a different variable then
+    # putting them all together. Another trade-off of using arrays and hashes is that
+    # we can simplu call through each item in the array and make it into and key inside 
+    # a hash with a given value all in one line of code. This allows for better readability
+    # and less clutter within the code.
+    
 # What does a method return?
 
 # What kinds of things can you pass into methods as arguments?
