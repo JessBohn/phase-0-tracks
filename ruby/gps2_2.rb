@@ -88,9 +88,20 @@ prettyfie_list($grocery_list)
 
 # Reflection:
 # What did you learn about pseudocode from working on this challenge?
+    # From working on this challenge I learned that pseudocode is a very
+    # important factor when programming, mostly to yourself as a programmer/developer.
+    # I also learned some better practices for pseudocoding such as refraining
+    # from language-specific words while still writing detailed steps to 
+    # your program. For my pairing session my pair, Kayden Williams, was the driver
+    # during the pseudocoding process and it made me realize how to perfect my
+    # own pseudocode since I honestly do not like how he writes his. I am not
+    # saying there is anything wrong with his, I am just saying that through
+    # watching him work on the pseudocode it has heled me figure out how to
+    # write my own from now on, which I was not very good at before this
+    # challenge.
 
 # What are the tradeoffs of using arrays and hashes for this challenge?
-
+    # One of the tradeoffs of using arrays and hashes for this challenge is that
 # What does a method return?
 
 # What kinds of things can you pass into methods as arguments?
