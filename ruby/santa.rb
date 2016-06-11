@@ -12,6 +12,8 @@ class Santa
 		@age = 0
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", 
 			"Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		puts "This new Santa is a(n) #{@gender} #{@ethnicity} and #{@age}
+				years old!"
 	end
 
 	# Define method for speak
@@ -43,6 +45,6 @@ santa_genders.length.times do |i|
 	santas << Santa.new(santa_genders[i], santa_ethnicities[i])
 end
 
-p santas
+
 # santa.speak
 # santa.eat_milk_and_cookies("chocolate chip cookie")
