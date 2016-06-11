@@ -27,6 +27,10 @@ class Santa
 
 end
 
-santa = Santa.new("female", "Latino")
+santas = []
+santa_genders = ["female", "male", "cisgender", 
+	"agender", "bigender", "N/A", "gender fluid"]
+santa_ethnicities = ["Goddess", "Latino", "Centaur", "African-American",
+	"German", "American", "Canadian"]
 santa.speak
 santa.eat_milk_and_cookies("chocolate chip cookie")
