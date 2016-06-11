@@ -3,6 +3,11 @@
 
 # Create a Santa Class
 class Santa
+	# Add initiliaze method
+		# Prints line stating new Santa instance
+	def initialize
+		print "Initializing Santa instance..."
+	end
 
 	# Define method for speak
 	def speak
@@ -17,6 +22,5 @@ class Santa
 		print "That was a good #{cookie}! The milk was delicious too!"
 	end
 
-	# Add initiliaze method
-		# Prints line stating new Santa instance
+
 end
