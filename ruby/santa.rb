@@ -53,9 +53,12 @@ class Santa
 	def ethnicity
 		@ethnicity
 	end
-	# def gender=(new_gender)
-	# 	@gender = new_gender
-	# end
+
+	# setter method that reassigns gender
+	# must be available outside of class def
+	def gender=(new_gender)
+		@gender = new_gender
+	end
 end
 
 # Create an empty array for multiple santas
@@ -71,7 +74,7 @@ santa_genders.length.times do |i|
 	santas << Santa.new(santa_genders[i], santa_ethnicities[i])
 end
 # Reassign a gender
-# santas[10].gender = "male"
+santas[5].gender = "male"
 
 
 
@@ -84,7 +87,7 @@ santas.each do |i|
 	i.celebrate_birthday
 	puts "Santa number #{santas.index(i)} is now #{i.age} years old!"
 end
-# p santas
+p santas
 
 # Make each santa eat the cookie given
 # santas.each do |i|
