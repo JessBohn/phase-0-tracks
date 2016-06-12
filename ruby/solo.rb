@@ -27,8 +27,12 @@ class Cat
 
 		# Set characteristic for level of talkative-ness
 			# Create list of "levels" - mild, medium, high
+			meowiness = ["mild", "medium", "high"]
+			# Randomly select level from list
+			@meowiness = meowiness.sample
 
 			puts "This cat is a #{@breed}, is a #{@gender}, and is #{@age} years old!"
+			puts "This cat is also a #{@meowiness} meow-er!"
 		end
 
 	# Method for meowing
