@@ -3,7 +3,7 @@
 
 # Create a class that creates a cute kitty cat!
 class Cat
-	attr_reader :breed
+	attr_reader :breed, :age
 	# Set characteristics in initialize 
 	def initialize
 		puts "Initializing cat instance..."
@@ -14,17 +14,19 @@ class Cat
 				"Himalayan", "Munchkin", "Siberian"]
 			# Choose random breed from list for each rendering
 			@breed = cat_breeds.sample
-			puts "This cat is a #{@breed}"
-	end
+
 		# Set characteristic for cat's age
 			# Choose random age between 0 and 20 (cat's don't get that old)
-		
+			@age = Random.new.rand(20)
 		# Set characteristic for gender
 			# create list of genders (male & female)
 			# randomly select gender fromt list to assign
 
 		# Set characteristic for level of talkative-ness
 			# Create list of "levels" - mild, medium, high
+
+			puts "This cat is a #{@breed} and is #{@age} years old!"
+		end
 
 	# Method for meowing
 		# Input: level of talkative-ness
