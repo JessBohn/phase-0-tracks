@@ -36,9 +36,6 @@ class Cat
 			# Collect data & convert to a number
 			meowiness = gets.chomp
 			@meowiness = meowiness.to_i
-
-			puts "#{@name} is a #{@breed}, is a #{@gender}, and is #{@age} years old!"
-			
 			
 	end
 
@@ -56,19 +53,25 @@ class Cat
 			5.times { print "meowwww  ".upcase } if (9..10).include?(@meowiness)
 		end
 		
+
 	# Method for catnip attack
 		def catnip_attack
 		# prints string announcing cat has found catnip and is now
 		# bouncing off the walls
-			puts "Uh oh the cat has found some catnip and is going crazy!"
+			puts "Uh oh the cat has found the catnip and is going crazy!"
 		end
 
+
 	# Method cuddles
-		def cuddles
+		def kitty_cuddles(cuddle)
 		# prints string announcing your baby kitty has jumped on you
 		# for cuddle time! & is now kneading you, ouch
-			puts "Aww, the cat has climbed on your lap and is cuddling with you."
-			puts "Oh, they're kneading you. Ouch."
+			if cuddle == "yes"
+				puts "Aww, #{@name} has climbed on your lap and is cuddling with you."
+				puts "Oh, #{@name} kneading you. Ouch."
+			else
+				puts "Boo! :( "
+			end
 		end
 end
 
@@ -90,6 +93,9 @@ end
 cats.each do |cat_num|
 	print "#{cat_num.name} is a #{cat_num.age} year old #{cat_num.gender} #{cat_num.breed} "
 	puts "with a talkative ranking of #{cat_num.meowiness}"
+	puts "Does #{cat_num.name} like to cuddle?"
+	cuddle = gets.chomp
+	cat_num.kitty_cuddles(cuddle)
 end
 
 
