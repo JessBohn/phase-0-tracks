@@ -3,7 +3,7 @@
 
 # Create a class that creates a cute kitty cat!
 class Cat
-	attr_reader :breed, :age, :gender
+	attr_reader :breed, :age, :gender, :meowiness
 	# Set characteristics in initialize 
 	def initialize
 		puts "Initializing cat instance..."
@@ -34,13 +34,23 @@ class Cat
 			puts "This cat is a #{@breed}, is a #{@gender}, and is #{@age} years old!"
 			puts "This cat is also a #{@meowiness} meow-er!"
 		end
-
+		meowiness = @meowiness
 	# Method for meowing
 		# Input: level of talkative-ness
+		def meow
 		# output: prints string of # of meows based on talkative-ness
 			# IF mild , meows once
+			if @meowiness == "mild"
+				puts "meowww"
 			# IF medium, meows 3 times
+			elsif @meowiness == "medium"
+				3.times { print "meowww  "}
 			# IF high, meows 5 times, CAPS
+			else
+				5.times { print "meowww  ".upcase }
+			end
+
+		end
 
 	# Method for catnip attack
 		# prints string announcing cat has found catnip and is now
@@ -51,4 +61,5 @@ class Cat
 		# for cuddle time! & is now kneading you, ouch
 end
 
-Cat.new
+lambda = Cat.new
+lambda.meow
