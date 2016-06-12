@@ -35,14 +35,16 @@ class Santa
 
 	# Add method that takes a specific reindeer as an argument
 	# and moves said reindeer to end of array
-	# def get_mad_at(reindeer)
-	# 	@reindeer_ranking.each do |name|
- #  		until reindeer == name
- #  			@reindeer_ranking.delete(name)
- #  			@reindeer_ranking.push(name)
- #  		end
- #  		end
-	# end
+	def get_mad_at(reindeer)
+		@reindeer_ranking.each do |name|
+  		if reindeer == name
+  			@reindeer_ranking.delete(name)
+  			@reindeer_ranking.push(name)
+  		else
+  			next
+  		end
+  		end
+	end
 
 	# Method to simply return age of the santa
 	def age
@@ -75,11 +77,8 @@ santa_genders.length.times do |i|
 end
 # Reassign a gender
 santas[5].gender = "male"
-
-
-
-
-# get_mad_at("Rudolph")
+santas[4].get_mad_at("Rudolph")
+p santas[4]
 
 
 # Make each of the santas say the holiday greeeting
@@ -87,7 +86,7 @@ santas.each do |i|
 	i.celebrate_birthday
 	puts "Santa number #{santas.index(i)} is now #{i.age} years old!"
 end
-p santas
+
 
 # Make each santa eat the cookie given
 # santas.each do |i|
