@@ -5,8 +5,8 @@
 
 # Create a class that creates a cute kitty cat!
 class Cat
-	attr_reader :breed, :age, :meowiness
-	attr_accessor :gender
+	attr_reader :breed, :meowiness, :name
+	attr_accessor :gender, :age
 	# Set characteristics in initialize 
 	def initialize
 		puts "Initializing cat instance..."
@@ -31,34 +31,32 @@ class Cat
 			age = gets.chomp
 			@age = age.to_i
 
-
 		# Set characteristic for level of talkative-ness
-			# Create list of "levels" - mild, medium, high
-			meowiness = ["low", "medium", "high"]
-			# Randomly select level from list
-			@meowiness = meowiness.sample
+			# Ask user for cat's level of talkative-ness
+			puts "Please rank #{@name}'s level of 'talkative-ness' from 1 to 10"
+			# Collect data & convert to a number
+			meowiness = gets.chomp
+			@meowiness = meowiness.to_i
 
-			puts "This cat is a #{@breed}, is a #{@gender}, and is #{@age} years old!"
-			puts "This cat is also a #{@meowiness} meow-er!"
+			puts "#{@name} is a #{@breed}, is a #{@gender}, and is #{@age} years old!"
+			
 		end
-		meowiness = @meowiness
+
 	# Method for meowing
 		# Input: level of talkative-ness
 		def meow
 		# output: prints string of # of meows based on talkative-ness
-			# IF mild , meows once
-			if @meowiness == "low"
-				puts "meowww"
-			# IF medium, meows 3 times
-			elsif @meowiness == "medium"
-				3.times { print "meowww  "}
-			# IF high, meows 5 times, CAPS
-			else
-				5.times { print "meowww  ".upcase }
-			end
-
+			# IF mild (1 to 3) , meows once
+			puts "meowww" if (1..3).include?(@meowiness)
+			# IF medium (4 to 6), meows 3 times
+			3.times { print "meowww  "} if (4..6).include?(@meowiness)
+			# IF high (7 to 8), meows 5 times,
+			5.times { print "meowwww  " } if (7..8).include?(@meowiness)
+			# IF  really high (9 to 10), meows 5 times, CAPS
+			5.times { print "meowwww  ".upcase } if (9..10).include?(@meowiness)
+	
 		end
-
+		
 	# Method for catnip attack
 		def catnip_attack
 		# prints string announcing cat has found catnip and is now
@@ -89,8 +87,8 @@ end
 	# Print out all attributes of each cat created
 
 
-Cat.new
-
+cat = Cat.new
+cat.meow
 
 # Original class code w/o user INTERFACE
 
