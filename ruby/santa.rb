@@ -11,11 +11,16 @@ class Santa
 
 	# Add initiliaze method
 		# Prints line stating new Santa instance
-	def initialize(gender, ethnicity)
-		@gender = gender
-		@ethnicity = ethnicity
+	def initialize
+		santa_genders = ["female", "male", "cisgender", "agender", 
+			"bigender", "N/A", "gender fluid", "transgender"]
+		santa_ethnicities = ["Goddess", "Latino", "Centaur", "African-American",
+			"German", "American", "Canadian", "Unicorn", "cat lady", "white"]
+
+		@gender = santa_genders.sample
+		@ethnicity = santa_ethnicities.sample
 		puts "Initializing Santa instance..."
-		@age = 0
+		@age = Random.new.rand(140)
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", 
 			"Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 		puts "This new Santa is a(n) #{@gender} #{@ethnicity} and #{@age}
@@ -54,33 +59,45 @@ class Santa
 
 end
 
-# Create an empty array for multiple santas
-santas = []
-# Create list of genders to be given to new santas
-santa_genders = ["female", "male", "cisgender", 
-	"agender", "bigender", "N/A", "gender fluid"]
-# Create matching list of ethnicities to go with above genders
-santa_ethnicities = ["Goddess", "Latino", "Centaur", "African-American",
-	"German", "American", "Canadian"]
-# Combine genders and ethnicities into array of santas
-santa_genders.length.times do |i|
-	santas << Santa.new(santa_genders[i], santa_ethnicities[i])
-end
+
+Santa.new
+Santa.new
+
+
+
+
+
+
+
+# # Create an empty array for multiple santas
+# santas = []
+# # Create list of genders to be given to new santas
+# santa_genders = ["female", "male", "cisgender", 
+# 	"agender", "bigender", "N/A", "gender fluid"]
+# # Create matching list of ethnicities to go with above genders
+# santa_ethnicities = ["Goddess", "Latino", "Centaur", "African-American",
+# 	"German", "American", "Canadian"]
+# # Combine genders and ethnicities into array of santas
+# santa_genders.length.times do |i|
+# 	santas << Santa.new(santa_genders[i], santa_ethnicities[i])
+# end
+
+
 # Reassign a gender
-santas[5].gender = "male"
-p santas[5]
-# Rearrange a certain santa's reindeer ranking
-santas[4].get_mad_at("Rudolph")
-p santas[4]
+# santas[5].gender = "male"
+# p santas[5]
+# # Rearrange a certain santa's reindeer ranking
+# santas[4].get_mad_at("Rudolph")
+# p santas[4]
 
 
-santas.each do |i|
-	i.celebrate_birthday
-	santa_num = santas.index(i) + 1
-	puts "Santa number #{santa_num} is now #{i.age} years old!"
-end
+# santas.each do |i|
+# 	i.celebrate_birthday
+# 	santa_num = santas.index(i) + 1
+# 	puts "Santa number #{santa_num} is now #{i.age} years old!"
+# end
 
-puts "Santa # 2's ethnicity is #{santas[1].ethnicity}"
+# puts "Santa # 2's ethnicity is #{santas[1].ethnicity}"
 
 # Make each santa eat the cookie given
 # santas.each do |i|
