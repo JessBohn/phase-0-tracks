@@ -59,14 +59,21 @@ class Santa
 
 end
 
+# Create multiple instances of Santas
+	# Set number of santas to 0 at beginning
+num_of_santas = 0
+# Use loop to create a desired number of santas
+until num_of_santas == 150
+	# create new instance for each iteration
+	Santa.new
+	# increase number of santas by one for each iteration
+	num_of_santas += 1
+end
 
-Santa.new
-Santa.new
 
 
 
-
-
+# DRIVER CODE USED BEFORE RELEASE 4
 
 
 # # Create an empty array for multiple santas
