@@ -12,14 +12,18 @@ class Santa
 	# Add initiliaze method
 		# Prints line stating new Santa instance
 	def initialize
+		# Establish sample array of genders to pick from
 		santa_genders = ["female", "male", "cisgender", "agender", 
 			"bigender", "N/A", "gender fluid", "transgender"]
+		# Establish sample array of ethnicities to pick from
 		santa_ethnicities = ["Goddess", "Latino", "Centaur", "African-American",
 			"German", "American", "Canadian", "Unicorn", "cat lady", "white"]
-
+		# Select random gender from sample genders for new instance
 		@gender = santa_genders.sample
+		# Select random ethnicity from sample ethnicities for new instance
 		@ethnicity = santa_ethnicities.sample
 		puts "Initializing Santa instance..."
+		# Establishes a random age for each instance
 		@age = Random.new.rand(140)
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", 
 			"Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
