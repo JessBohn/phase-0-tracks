@@ -3,6 +3,12 @@
 
 # Create a Santa Class
 class Santa
+	# Method to simply return age of the santa
+	# Method to return ethniciity of santa
+	attr_reader :age, :ethnicity
+	# setter method that can reassign gender outside of class
+	attr_accessor :gender
+
 	# Add initiliaze method
 		# Prints line stating new Santa instance
 	def initialize(gender, ethnicity)
@@ -46,21 +52,6 @@ class Santa
   		end
 	end
 
-	# Method to simply return age of the santa
-	def age
-		@age
-	end
-
-	# Method to return ethniciity of santa
-	def ethnicity
-		@ethnicity
-	end
-
-	# setter method that reassigns gender
-	# must be available outside of class def
-	def gender=(new_gender)
-		@gender = new_gender
-	end
 end
 
 # Create an empty array for multiple santas
@@ -77,16 +68,19 @@ santa_genders.length.times do |i|
 end
 # Reassign a gender
 santas[5].gender = "male"
+p santas[5]
+# Rearrange a certain santa's reindeer ranking
 santas[4].get_mad_at("Rudolph")
 p santas[4]
 
 
-# Make each of the santas say the holiday greeeting
 santas.each do |i|
 	i.celebrate_birthday
-	puts "Santa number #{santas.index(i)} is now #{i.age} years old!"
+	santa_num = santas.index(i) + 1
+	puts "Santa number #{santa_num} is now #{i.age} years old!"
 end
 
+puts "Santa # 2's ethnicity is #{santas[1].ethnicity}"
 
 # Make each santa eat the cookie given
 # santas.each do |i|
