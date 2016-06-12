@@ -12,27 +12,27 @@ class Cat
 		puts "Initializing cat instance..."
 		# Set characteristic for the cat's name
 			# Ask user for cat's name
-			puts "What is this cat's name?"
+			print "What is this cat's name? "
 			@name = gets.chomp
 		# Set characteristic for breed of each cat
 			# Ask user for the breed of their cat
-			puts "What breed is #{@name}?"
+			print "What breed is #{@name}? "
 			@breed = gets.chomp
 
 		# Set characteristic for gender
 			# Ask user for cat's gender
-			puts "Is #{@name} a male or female?"
+			print  "Is #{@name} a male or female? "
 			@gender = gets.chomp
 			
 		# Set characteristic for cat's age
 			# Ask user for the age of the cat
-			puts "How old is #{@name}?"
+			print "How old is #{@name}? "
 			age = gets.chomp
 			@age = age.to_i
 
 		# Set characteristic for level of talkative-ness
 			# Ask user for cat's level of talkative-ness
-			puts "Please rank #{@name}'s level of 'talkative-ness' from 1 to 10"
+			print "Please rank #{@name}'s level of 'talkative-ness' from 1 to 10: "
 			# Collect data & convert to a number
 			meowiness = gets.chomp
 			@meowiness = meowiness.to_i
@@ -68,9 +68,11 @@ class Cat
 		# for cuddle time! & is now kneading you, ouch
 			if cuddle == "yes"
 				puts "Aww, #{@name} has climbed on your lap and is cuddling with you."
-				puts "Oh, #{@name} kneading you. Ouch."
+				puts "Oh, #{@name} is kneading you. Ouch..."
+				puts "\n"
 			else
 				puts "Boo! :( "
+				puts "\n"
 			end
 		end
 end
@@ -84,16 +86,27 @@ cats = []
 loop do 
 	# Add each cat created to an array
 	cats << Cat.new
-	puts " - click to continue or type done"
+	puts " - click to continue or type done -"
 	original_input = gets.chomp
 	break if original_input == "done"
 end
 
 # Print out all attributes of each cat created
 cats.each do |cat_num|
-	print "#{cat_num.name} is a #{cat_num.age} year old #{cat_num.gender} #{cat_num.breed} "
-	puts "with a talkative ranking of #{cat_num.meowiness}"
-	puts "Does #{cat_num.name} like to cuddle?"
+	puts "\n"
+	print "Is #{cat_num.age} the correct age for #{cat_num.name}? "
+	correct_age_yn = gets.chomp
+		if correct_age_yn == "no"
+			print "What is #{cat_num.name}'s correct age? "
+			cat_num.age = gets.chomp.to_i
+		else
+			puts "\n"
+		end
+	print "#{cat_num.name} is a #{cat_num.age} year old #{cat_num.gender} #{cat_num.breed} ".upcase
+	puts "with a talkative ranking of #{cat_num.meowiness}".upcase
+
+	puts "\n"
+	print "Does #{cat_num.name} like to cuddle? "
 	cuddle = gets.chomp
 	cat_num.kitty_cuddles(cuddle)
 end
