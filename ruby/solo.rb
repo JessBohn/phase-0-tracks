@@ -5,8 +5,8 @@
 
 # Create a class that creates a cute kitty cat!
 class Cat
-	attr_reader :breed, :meowiness, :name
-	attr_accessor :gender, :age
+	attr_reader :breed, :meowiness, :name, :gender
+	attr_accessor :age
 	# Set characteristics in initialize 
 	def initialize
 		puts "Initializing cat instance..."
@@ -72,33 +72,31 @@ class Cat
 		end
 end
 
-# USER INTERFACE
+# USER INTERFACE		
+
+cats = []
 
 # User needs to be able to create as many instances as they want
 	# Keep creating instances until the user types 'done'
-		# Ask user for the name of the cat
-		# Ask user for the breed
-		# Ask user for age
-			# convert to a number
-		# Ask if the cat is female or male
-		# Ask for the cat's level of meowiness (low, medium, or high)
-		# Add each cat created to an array
-	# Print out all attributes of each cat created
-cats = []
-
 loop do 
+	# Add each cat created to an array
 	cats << Cat.new
 	puts " - click to continue or type done"
 	original_input = gets.chomp
 	break if original_input == "done"
 end
 
+# Print out all attributes of each cat created
 cats.each do |cat_num|
-	puts "#{@name} is a #{@age} year old #{@breed} a talkative
-			 ranking of #{@meowiness}"
+	print "#{cat_num.name} is a #{cat_num.age} year old #{cat_num.gender} #{cat_num.breed} "
+	puts "with a talkative ranking of #{cat_num.meowiness}"
 end
 
-# Original class code w/o user INTERFACE
+
+
+
+
+# Original class code W/O USER INTERFACE
 
 # class Cat
 # 	attr_reader :breed, :age, :meowiness
