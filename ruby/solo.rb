@@ -53,8 +53,11 @@ class Cat
 		end
 
 	# Method for catnip attack
+		def catnip_attack
 		# prints string announcing cat has found catnip and is now
 		# bouncing off the walls
+			puts "Uh oh the cat has found some catnip and is going crazy!"
+		end
 
 	# Method cuddles
 		# prints string announcing your baby kitty has jumped on you
@@ -63,3 +66,4 @@ end
 
 lambda = Cat.new
 lambda.meow
+lambda.catnip_attack
