@@ -3,11 +3,19 @@
 
 # Create a class that creates a cute kitty cat!
 class Cat
+	attr_reader :breed
 	# Set characteristics in initialize 
+	def initialize
+		puts "Initializing cat instance..."
 		# Set characteristic for breed of each cat
 			# Create a list of different cat breeds
+			cat_breeds = ["Siamese", "calico", "diluted calico", 
+				"Maine Coon", "Bengal", "Sphynx", "Russian Blue", 
+				"Himalayan", "Munchkin", "Siberian"]
 			# Choose random breed from list for each rendering
-
+			@breed = cat_breeds.sample
+			puts "This cat is a #{@breed}"
+	end
 		# Set characteristic for cat's age
 			# Choose random age between 0 and 20 (cat's don't get that old)
 		
@@ -33,3 +41,5 @@ class Cat
 		# prints string announcing your baby kitty has jumped on you
 		# for cuddle time! & is now kneading you, ouch
 end
+
+Cat.new
