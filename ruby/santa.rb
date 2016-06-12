@@ -35,14 +35,27 @@ class Santa
 
 	# Add method that takes a specific reindeer as an argument
 	# and moves said reindeer to end of array
-	def get_mad_at(reindeer)
-		@reindeer_ranking.each do |name|
-  		until reindeer == name
-  			@reindeer_ranking.delete(name)
-  			@reindeer_ranking.push(name)
-  		end
-  		end
+	# def get_mad_at(reindeer)
+	# 	@reindeer_ranking.each do |name|
+ #  		until reindeer == name
+ #  			@reindeer_ranking.delete(name)
+ #  			@reindeer_ranking.push(name)
+ #  		end
+ #  		end
+	# end
+
+	# Method to simply return age of the santa
+	def age
+		@age
 	end
+
+	# Method to return ethniciity of santa
+	def ethnicity
+		@ethnicity
+	end
+	# def gender=(new_gender)
+	# 	@gender = new_gender
+	# end
 end
 
 # Create an empty array for multiple santas
@@ -57,26 +70,23 @@ santa_ethnicities = ["Goddess", "Latino", "Centaur", "African-American",
 santa_genders.length.times do |i|
 	santas << Santa.new(santa_genders[i], santa_ethnicities[i])
 end
-
-
-
-
+# Reassign a gender
+# santas[10].gender = "male"
 
 
 
 
 # get_mad_at("Rudolph")
+
+
 # Make each of the santas say the holiday greeeting
-# santas.each do |i|
-# 	i.speak
-# end
-# # Make each santa eat the cookie given
+santas.each do |i|
+	i.celebrate_birthday
+	puts "Santa number #{santas.index(i)} is now #{i.age} years old!"
+end
+# p santas
+
+# Make each santa eat the cookie given
 # santas.each do |i|
 # 	i.eat_milk_and_cookies("chocolate")
 # end
-
-
-
-
-# santa.speak
-# santa.eat_milk_and_cookies("chocolate chip cookie")
