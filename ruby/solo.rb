@@ -2,6 +2,7 @@
 # 06/12/16
 
 # Create a class that creates a cute kitty cat!
+class Cat
 	# Set characteristics in initialize 
 		# Set characteristic for breed of each cat
 			# Create a list of different cat breeds
@@ -31,4 +32,4 @@
 	# Method cuddles
 		# prints string announcing your baby kitty has jumped on you
 		# for cuddle time! & is now kneading you, ouch
-
+end
