@@ -60,10 +60,15 @@ class Cat
 		end
 
 	# Method cuddles
+		def cuddles
 		# prints string announcing your baby kitty has jumped on you
 		# for cuddle time! & is now kneading you, ouch
+			puts "Aww, the cat has climbed on your lap and is cuddling with you."
+			puts "Oh, they're kneading you. Ouch."
+		end
 end
 
 lambda = Cat.new
 lambda.meow
 lambda.catnip_attack
+lambda.cuddles
