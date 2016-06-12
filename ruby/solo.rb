@@ -40,7 +40,7 @@ class Cat
 			puts "#{@name} is a #{@breed}, is a #{@gender}, and is #{@age} years old!"
 			
 			
-		end
+	end
 
 	# Method for meowing
 		# Input: level of talkative-ness
