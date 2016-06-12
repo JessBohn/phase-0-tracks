@@ -20,10 +20,9 @@ class Cat
 			@breed = gets.chomp
 
 		# Set characteristic for gender
-			# create list of genders (male & female)
-			genders = ["female", "male"]
-			# randomly select gender fromt list to assign
-			@gender = genders.sample
+			# Ask user for cat's gender
+			puts "Is #{@name} a male or female?"
+			@gender = gets.chomp
 			
 		# Set characteristic for cat's age
 			# Ask user for the age of the cat
@@ -40,6 +39,7 @@ class Cat
 
 			puts "#{@name} is a #{@breed}, is a #{@gender}, and is #{@age} years old!"
 			
+			
 		end
 
 	# Method for meowing
@@ -54,7 +54,6 @@ class Cat
 			5.times { print "meowwww  " } if (7..8).include?(@meowiness)
 			# IF  really high (9 to 10), meows 5 times, CAPS
 			5.times { print "meowwww  ".upcase } if (9..10).include?(@meowiness)
-	
 		end
 		
 	# Method for catnip attack
@@ -85,10 +84,19 @@ end
 		# Ask for the cat's level of meowiness (low, medium, or high)
 		# Add each cat created to an array
 	# Print out all attributes of each cat created
+cats = []
 
+loop do 
+	cats << Cat.new
+	puts " - click to continue or type done"
+	original_input = gets.chomp
+	break if original_input == "done"
+end
 
-cat = Cat.new
-cat.meow
+cats.each do |cat_num|
+	puts "#{@name} is a #{@age} year old #{@breed} a talkative
+			 ranking of #{@meowiness}"
+end
 
 # Original class code w/o user INTERFACE
 
