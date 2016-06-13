@@ -15,6 +15,11 @@ class Adult
 	include Shout
 end
 
+ 
+Child.new.loud_yell("I'm hungry")
+Adult.new.loud_yell("go to your room")
+
+
 # module Shout
 #   def self.yell_angrily(words)
 #     words + "!!!" + " :("
