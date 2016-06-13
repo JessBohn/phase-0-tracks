@@ -11,6 +11,9 @@ class Child
 	include Shout
 end
 
+class Adult
+	include Shout
+end
 
 # module Shout
 #   def self.yell_angrily(words)
