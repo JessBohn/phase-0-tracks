@@ -2,9 +2,14 @@
 # 06/12/16
 
 module Shout
-	def loud_yell(words)
-		puts words.upcase + "!!!"
+	def yell_angrily(words)
+		puts words.upcase + "!!!" + ">:("
 	end
+
+	def yell_happily(words)
+		puts words + "!!" + ":D"
+	end
+
 end
 
 class Child
@@ -16,8 +21,11 @@ class Adult
 end
 
  
-Child.new.loud_yell("I'm hungry")
-Adult.new.loud_yell("go to your room")
+Child.new.yell_angrily("I'm hungry")
+Adult.new.yell_angrily("go to your room")
+
+Child.new.yell_happily("It's so fluffy, I'm gonna die")
+Adult.new.yell_happily("Omg, it's so good to see you")
 
 
 # module Shout
