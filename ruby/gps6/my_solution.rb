@@ -101,3 +101,48 @@ alaska.virus_effects
 
 #=======================================================================
 # Reflection Section
+
+# - What are the differences between the two hash syntaxes shown
+#   in the state_data file?
+
+#   The differences is that the first set of keys and values are
+#   set using the => syntax whereas the nested hash with the state
+#   information in it uses the symbol syntax with the colon after 
+#   the symbol name to set the key(symbol) and value pairs
+
+# - What does the require_relative do? How is it different from
+  # require?
+
+  # require_relative allows the current file to reference the information
+  # inside another file which is defined in '' after the require_relative
+  # command using the name of the file that you want to reference 
+  # require_relative is to simplify the general command require for a file within
+  # the same directory as the file you are working on. To use only require
+  # you must use the absolute file path
+
+# - What are some ways to iterate through a hash?
+
+  # You can use .each to iterate through each key-value pair
+    # in a hash. You also use each_pair for every pair, each_key
+    # for every key in the hash, or each_value to go through each
+    # value of the hash.
+
+# - When refactoring virus_effects, what stood out to you about
+#   the variables, if anything?
+
+  # When I examined the variables I realized that since each of the
+  # variables needed as parameters was already set to an instance
+  # variable during initialize that we shouldn't (and don't) need to
+  # collect them as parameters again for each of the methods inside
+  # of virus_effects. Therefore nealizing that we didn't need those
+  # arguments and removed them from the method calls, also removing
+  # the parameters from both of the methods' definitions.
+
+# - What concept did you mostly solidify in this challenge?
+
+  # Honestly, this challenge mostly helped me realize that I 
+  # already understood a lot of what we needed to do. Reading through
+  # the code I could pretty much identify what everything was
+  # to do and how it all worked together. This challenge did help
+  # me a little bit with identifying areas where refactoring 
+  # could be done to make the code more dry.
