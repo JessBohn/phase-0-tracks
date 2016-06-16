@@ -1,21 +1,29 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [with: Neill Perry ].
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
-#
+# This command allows the current file to reference the information
+  # inside the file name given. 
+# require_relative is to simplify the general require for a file within
+# the same directory as the file you are working on. To use only require
+# you must use the absolute file path
+
 require_relative 'state_data'
 
 class VirusPredictor
 
+  # Sets instance variables for state, population, and population density
+  # to the parameters passed into initialize
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
     @population_density = population_density
   end
 
+  # Purpose is to print the output of the predicted_deaths &
+  # speed_of_spread methods defined below by calling the methods
   def virus_effects
     predicted_deaths(@population_density, @population, @state)
     speed_of_spread(@population_density, @state)
@@ -23,6 +31,10 @@ class VirusPredictor
 
   private
 
+  # This method is responsible for calculationg the predicted
+  # amount of deaths for the state given based on that state's
+  # population and population density using the different 
+  # parameters defined in the if/else statement
   def predicted_deaths(population_density, population, state)
     # predicted deaths is solely based on population density
     if @population_density >= 200
@@ -41,6 +53,10 @@ class VirusPredictor
 
   end
 
+  # This method is responsible for calculation the speed at which
+  # the disease will spread for the state given based on its defined
+  # population density using the equations defined in the if/else 
+  # statement
   def speed_of_spread(population_density, state) #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
