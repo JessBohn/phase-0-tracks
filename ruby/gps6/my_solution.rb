@@ -1,7 +1,7 @@
 # Virus Predictor
 
 # I worked on this challenge [with: Neill Perry ].
-# We spent [#] hours on this challenge.
+# We spent [1.25] hours on this challenge.
 
 # EXPLANATION OF require_relative
 # This command allows the current file to reference the information
@@ -79,6 +79,8 @@ class VirusPredictor
   end
 
 end
+
+
 
 #=======================================================================
 
