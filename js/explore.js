@@ -9,3 +9,12 @@
   // set second variable value lower by one increment
 // print final value of the first variable
 
+function reverse(str) {
+  var reverse = "";
+  for (var i = str.length; i >= 0; i--) {
+    var reverse = reverse + str.charAt(i);
+  }
+  console.log(reverse);
+}
+
+reverse("magic cats");
