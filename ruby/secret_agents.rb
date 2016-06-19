@@ -10,6 +10,7 @@ def encrypt(str)
 		# make sure it's not a space		
 		if str[counter] != ' '
 
+
 			if str[counter] == 'z'
 				# edge case: z explicitly becomes a
 				str[counter] = 'a'
@@ -23,6 +24,7 @@ def encrypt(str)
 		# advance counter	
 		counter += 1
 	end
+
 
 	str
 end
@@ -64,7 +66,6 @@ password = gets.chomp
 # Call appropriate method and prints results then exits
 
 p send(choice,password)
-
 
 
 
