@@ -14,7 +14,11 @@ function reverse(str) {
   for (var i = str.length; i >= 0; i--) {
     var reverse = reverse + str.charAt(i);
   }
- // console.log(reverse);
+  return reverse;
 }
 
-var reversedString = reverse("magic cats");
+reversedString = reverse("magic cats");
+
+if (1==1) {
+  console.log(reversedString)
+}
