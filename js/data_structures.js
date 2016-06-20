@@ -4,3 +4,6 @@
 
 var horses = ["Daisy", "Marigold", "Brownie", "Blackie"];
 var colors = ["pink", "rainbow", "silver", "peach"];
+
+horses.push("Stallion");
+colors.push("blue");
