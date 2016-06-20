@@ -10,8 +10,6 @@ colors.push("blue");
 
 var object = {};
 
-console.log(object);
-
 for (var i = 0; i < horses.length; i++){
    object[horses[i]] = colors[i];
  }
