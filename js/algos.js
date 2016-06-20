@@ -65,7 +65,8 @@ function Compare(Object1, Object2) {
   // Set length of list to numItems
 
   // Set variable, numLetters, to random number
-  //var numLetters = Math.floor(Math.random() * 10);
+  var numLetters = Math.floor(Math.random() * 10);
+  console.log(numLetters);
   // Generate word of length numLetters with random letters
   //console.log(numLetters.toString(26).substr());
 
