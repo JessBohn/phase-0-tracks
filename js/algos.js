@@ -2,6 +2,12 @@
 // 06/20/16
 // 7.3 - Solo Challenge
 
+// I honestly could not figure out how to get release 1 or 2 to work correctly
+// I pushed this assignment off to focus on the assessment and did not leave
+// enough time to accurately research and learn the proper basics for this javascript challenge
+// I will be fixing this later today after I go through some of the provided material for learning javascript
+
+
 
 // BUSINESS CODE
 
@@ -49,7 +55,21 @@ function Compare(Object1, Object2) {
       console.log("false");
     }
   }
-}    
+} 
+
+// Release 2
+// Create function that takes in an integer and outputs a list with that amount of items
+  //randomWordList = [];
+  // Set variable, numItems, to inputted integer
+  
+  // Set length of list to numItems
+
+  // Set variable, numLetters, to random number
+  //var numLetters = Math.floor(Math.random() * 10);
+  // Generate word of length numLetters with random letters
+  //console.log(numLetters.toString(26).substr());
+
+
       
 
 // DRIVER CODE
