@@ -42,3 +42,35 @@ sqlite> SELECT * FROM pets;
 6|Athena|3|dog|true|2
 
 RELEASE 3
+
+sqlite> SELECT pets.name, owners.name FROM pets JOIN owners ON pets.owner_id = owners.id;
+Zeus|Julie
+Charlie|Alex
+Lambda Lambda Lambda|Jessica
+Coalette|Zach
+Catsby|Jessica
+Athena|Julie
+
+sqlite> SELECT pets.name, pets.age, owners.name FROM pets JOIN owners ON pets.owner_id = owners.id;
+Zeus|5|Julie
+Charlie|2|Alex
+Lambda Lambda Lambda|3|Jessica
+Catsby|3|Jessica
+Athena|3|Julie
+
+sqlite> SELECT pets.name, pets.type, owners.name FROM pets LEFT JOIN owners ON pets.owner_id = owners.id;
+Zeus|dog|Julie
+Charlie|dog|Alex
+Lambda Lambda Lambda|cat|Jessica
+Catsby|cat|Jessica
+Athena|dog|Julie
+
+sqlite> SELECT pets.name, pets.type, owners.name FROM pets RIGHT JOIN owners ON pets.owner_id = owners.id;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+
+sqlite> SELECT owners.name, pets.name, pets.cute FROM owners JOIN pets ON owners.id = pets.owner_id;
+Julie|Zeus|false
+Alex|Charlie|true
+Jessica|Lambda Lambda Lambda|true
+Jessica|Catsby|true
+Julie|Athena|true
