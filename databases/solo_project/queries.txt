@@ -1,0 +1,44 @@
+RELEASE 2
+
+sqlite> SELECT * FROM pets;
+1|Zeus|5|dog|false|2
+2|Charlie|2|dog|true|3
+3|Lambda Lambda Lambda|3|cat|true|1
+4|Coalette|1|dog|false|4
+5|Catsby|3|cat|true|1
+6|Athena|4|dog|true|2
+
+sqlite> UPDATE pets SET age=3 WHERE name="Athena";
+
+sqlite> SELECT * FROM pets, owners WHERE pets.owner_id = owners.id;
+1|Zeus|5|dog|false|2|2|Julie
+2|Charlie|2|dog|true|3|3|Alex
+3|Lambda Lambda Lambda|3|cat|true|1|1|Jessica
+4|Coalette|1|dog|false|4|4|Zach
+5|Catsby|3|cat|true|1|1|Jessica
+6|Athena|3|dog|true|2|2|Julie
+
+sqlite> SELECT name, type FROM pets;
+Zeus|dog
+Charlie|dog
+Lambda Lambda Lambda|cat
+Catsby|cat
+Athena|dog
+
+sqlite> SELECT owners.name, pets.name FROM owners JOIN pets ON owners.id = pets.owner_id;
+Julie|Zeus
+Alex|Charlie
+Jessica|Lambda Lambda Lambda
+Zach|Coalette
+Jessica|Catsby
+Julie|Athena
+
+sqlite> DELETE FROM pets WHERE name="Coalette";
+sqlite> SELECT * FROM pets;
+1|Zeus|5|dog|false|2
+2|Charlie|2|dog|true|3
+3|Lambda Lambda Lambda|3|cat|true|1
+5|Catsby|3|cat|true|1
+6|Athena|3|dog|true|2
+
+RELEASE 3
