@@ -35,7 +35,6 @@ create_horror_cmd = <<-SQL2
     release_year INT,
     category VARCHAR(255)
   )
-
 SQL2
 
 # Romance
@@ -157,27 +156,59 @@ end
 
 puts "Your movies have been added to your personal database!"
 
+
+# Ask user if they would like to view their lists
+print "Would you like to view your movies?"
+view_movies = gets.chomp.downcase
 # Repeat display method until user says exit
-  # Ask user if they would like to view their lists
-    # IF yes
-      # Ask which category they would like to see
-      # IF all
-        # Display all
-      # ELSIF comedy
-        # display comedy table
-      # ELSIF horror
-        # display horro table
-      # ELSIF romance
-        # display romance table
-      # ELSIF action
-        # display action
-      # ELSIF scifi table
-        # display scifi table
-      # ELSIF drama
-        # display drama table
-      # ELSE
-        # Tell them to pick one of the categories or say all
-      # END
+  # IF yes
+  if view_movies == "yes"
+    # Ask which category they would like to see
+    print "Which category would you like to view?"
+    category = gets.chomp.downcase
+    # IF all
+    # if category == "all"
+      # Display all
+
+    # ELSIF comedy
+    if category == "comedy"
+      # display comedy table
+      output = db.execute("SELECT * FROM comedy")
+      puts "#{output}"
+    # ELSIF horror
+    elsif category == "horror"
+      # display horror table
+      output = db.execute("SELECT * FROM horror")
+      puts "#{output}"
+    # ELSIF romance
+    elsif category == "romance"
+      # display romance table
+      output = db.execute("SELECT * FROM romance")
+      puts "#{output}"
+    # ELSIF action
+    elsif category == "action"
+      # display action
+      output = db.execute("SELECT * FROM action")
+      puts "#{output}"
+    # ELSIF scifi table
+    elsif category == "sci-fi"
+      # display scifi table
+      output = db.execute("SELECT * FROM scifi")
+      puts "#{output}"
+    # ELSIF drama
+    elsif category == "drama"
+      # display drama table
+      output = db.execute("SELECT * FROM drama")
+      puts "#{output}"
+    # ELSE
+    else
+      # Tell them to pick one of the categories or say all
+      puts "Please pick one of the available categories to view"
+    # END
+    end
+  else
+
+  end
 
 
 
