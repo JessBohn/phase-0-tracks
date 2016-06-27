@@ -82,18 +82,6 @@ create_drama_cmd = <<-SQL6
   )
 SQL6
 
-# Call table commands
-db.execute(create_comedy_cmd)
-db.execute(create_horror_cmd)
-db.execute(create_romance_cmd)
-db.execute(create_action_cmd)
-db.execute(create_scifi_cmd)
-db.execute(create_drama_cmd)
-
-# Create separate sql command strings for each category
-# def create_comedy(db, title, director, release_year)
-#   db.execute("INSERT INTO comedy (title, director, release_year, category) VALUES (?, ?, ?, ?)", [title, director, release_year, "Comedy" ])
-# end
 
 #USER INPUT
 
@@ -116,26 +104,38 @@ until input == "done"
 
   # IF comedy
   if category == "comedy"
+    # Create comedy table
+    db.execute(create_comedy_cmd)
     # Insert information into comedy table
     db.execute("INSERT INTO comedy (title, director, release_year, category) VALUES (?, ?, ?, ?)", [title, director, release_year, "Comedy" ])
   # ELSIF horror
   elsif category == "horror"
+    # Create horror table
+    db.execute(create_horror_cmd)
     # Insert information into horror table
     db.execute("INSERT INTO horror (title, director, release_year, category) VALUES (?, ?, ?, ?)", [title, director, release_year, "Horror" ])
   # ELSIF romance
   elsif category == "romance"
+    # Create romance table
+    db.execute(create_romance_cmd)
     # Insert information into romance table
     db.execute("INSERT INTO romance (title, director, release_year, category) VALUES (?, ?, ?, ?)", [title, director, release_year, "Romance" ])
   # ELSIF action
   elsif category == "action"
+    # Create action table
+    db.execute(create_action_cmd)
     # Insert information into action table
     db.execute("INSERT INTO action (title, director, release_year, category) VALUES (?, ?, ?, ?)", [title, director, release_year, "Action" ])
   # ELSIF scifi
   elsif category == "sci-fi"
+    # Create sci-fi table
+    db.execute(create_scifi_cmd)
     # Insert information into scifi table
     db.execute("INSERT INTO scifi (title, director, release_year, category) VALUES (?, ?, ?, ?)", [title, director, release_year, "Science Fiction" ])
   # ELSIF drama
   elsif category == "drama"
+    # Create drama table
+    db.execute(create_drama_cmd)
     # Insert information into drama table
     db.execute("INSERT INTO drama (title, director, release_year, category) VALUES (?, ?, ?, ?)", [title, director, release_year, "Drama" ])
   # ELSE
