@@ -8,7 +8,6 @@
 
 # Use the sqlite3 add-on to properly run program
 require 'sqlite3'
-require 'faker'
 
 # Create database to store the movie information
 db = SQLite3::Database.new("movies.db")
