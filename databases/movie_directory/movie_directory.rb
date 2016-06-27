@@ -19,7 +19,7 @@ db = SQLite3::Database.new("movies.db")
 create_comedy_cmd = <<-SQL
   CREATE TABLE IF NOT EXISTS comedy(
     id INTEGER PRIMARY KEY,
-    name VARCHAR(255),
+    title VARCHAR(255),
     director VARCHAR(255),
     release_year INT,
     category VARCHAR(255)
@@ -30,7 +30,7 @@ SQL
 create_horror_cmd = <<-SQL2
   CREATE TABLE IF NOT EXISTS horror(
     id INTEGER PRIMARY KEY,
-    name VARCHAR(255),
+    title VARCHAR(255),
     director VARCHAR(255),
     release_year INT,
     category VARCHAR(255)
@@ -42,7 +42,7 @@ SQL2
 create_romance_cmd = <<-SQL3
   CREATE TABLE IF NOT EXISTS romance(
     id INTEGER PRIMARY KEY,
-    name VARCHAR(255),
+    title VARCHAR(255),
     director VARCHAR(255),
     release_year INT,
     category VARCHAR(255)
@@ -53,7 +53,7 @@ SQL3
 create_action_cmd = <<-SQL4
   CREATE TABLE IF NOT EXISTS action(
     id INTEGER PRIMARY KEY,
-    name VARCHAR(255),
+    title VARCHAR(255),
     director VARCHAR(255),
     release_year INT,
     category VARCHAR(255)
@@ -64,7 +64,7 @@ SQL4
 create_scifi_cmd = <<-SQL5
   CREATE TABLE IF NOT EXISTS scifi(
     id INTEGER PRIMARY KEY,
-    name VARCHAR(255),
+    title VARCHAR(255),
     director VARCHAR(255),
     release_year INT,
     category VARCHAR(255)
@@ -75,7 +75,7 @@ SQL5
 create_drama_cmd = <<-SQL6
   CREATE TABLE IF NOT EXISTS drama(
     id INTEGER PRIMARY KEY,
-    name VARCHAR(255),
+    title VARCHAR(255),
     director VARCHAR(255),
     release_year INT,
     category VARCHAR(255)
@@ -89,6 +89,11 @@ db.execute(create_romance_cmd)
 db.execute(create_action_cmd)
 db.execute(create_scifi_cmd)
 db.execute(create_drama_cmd)
+
+# Create separate sql command strings for each category
+# def create_comedy(db, title, director, release_year)
+#   db.execute("INSERT INTO comedy (title, director, release_year, category) VALUES (?, ?, ?, ?)", [title, director, release_year, "Comedy" ])
+# end
 
 #USER INPUT
 
@@ -110,10 +115,11 @@ until input == "done"
   release_year = gets.chomp.to_i
   puts "Your movie has been added to your personal database! Press enter to continute adding movies or type done to finish"
   input = gets.chomp
-end
 
   # IF comedy
+  if category == "comedy"
     # Insert information into comedy table
+    db.execute("INSERT INTO comedy (title, director, release_year, category) VALUES (?, ?, ?, ?)", [title, director, release_year, "Comedy" ])
   # ELSIF horror
     # Insert information into horror table
   # ELSIF romance
@@ -125,10 +131,17 @@ end
   # ELSIF drama
     # Insert information into drama table
   # ELSE
+  else
     # Tell user category unknown
+    puts "That category is not listed in this database. Here are the acceptabe categories"
     # List available categories
+    db.execute(".tables")
     # Ask user for movie category
+    puts "What category does your movie fall under?"
+    category = gets.chomp.downcase
   # END
+  end
+end
 
 # Repeat display method until user says exit
   # Ask user if they would like to view their lists
