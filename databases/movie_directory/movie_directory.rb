@@ -100,6 +100,7 @@ until input == "done"
   # Collect release date from user and convert to a number
   print "What year was this movie released? "
   release_year = gets.chomp.to_i
+  puts ""
 
   # IF comedy
   if category == "comedy"
@@ -155,6 +156,7 @@ until input == "done"
 end
 
 puts "Your movies have been added to your personal database!"
+puts""
 
 
 # Ask user if they would like to view their lists
@@ -212,6 +214,7 @@ view_movies = gets.chomp.downcase
   end
 
 # IF user viewed any of the tables
+puts ""
 if viewed_data
   # Ask user if all information is correct
   print "Is all of the information displayed above, correct? "
@@ -231,16 +234,9 @@ if viewed_data
     if wrong_data == "release year" then wrong_data = "release_year" end
     print "What is the corresponding correct information? "
     new_data = gets.chomp
-    if new_data.is_a?(String) then 
-      data_correction = <<-SQLUPD
+    data_correction = <<-SQLUPD
       UPDATE #{category} SET #{wrong_data}='#{new_data}' WHERE title='#{title}'
     SQLUPD
-    end 
-    
-    # update appropriate data
-    # data_correction = <<-SQLUPD
-    #   UPDATE #{category} SET #{wrong_data}=#{new_data} WHERE title='#{title}'
-    # SQLUPD
     db.execute(data_correction)
   # ELSE
   else
@@ -252,7 +248,7 @@ else
 end
 
 # Coongratulate user on their new personal movie database
-
+puts "Congratulation on using your new movie database to organize your collection!"
  
 
 
