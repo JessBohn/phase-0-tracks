@@ -113,8 +113,6 @@ until input == "done"
   # Collect release date from user and convert to a number
   puts "What year was this movie released?"
   release_year = gets.chomp.to_i
-  puts "Your movie has been added to your personal database! Press enter to continute adding movies or type done to finish"
-  input = gets.chomp
 
   # IF comedy
   if category == "comedy"
@@ -135,7 +133,7 @@ until input == "done"
   # ELSIF scifi
   elsif category == "sci-fi"
     # Insert information into scifi table
-    db.execute("INSERT INTO sci-fi (title, director, release_year, category) VALUES (?, ?, ?, ?)", [title, director, release_year, "Science Fiction" ])
+    db.execute("INSERT INTO scifi (title, director, release_year, category) VALUES (?, ?, ?, ?)", [title, director, release_year, "Science Fiction" ])
   # ELSIF drama
   elsif category == "drama"
     # Insert information into drama table
@@ -145,13 +143,18 @@ until input == "done"
     # Tell user category unknown
     puts "That category is not listed in this database. Here are the acceptabe categories"
     # List available categories
-    db.execute(".tables")
+    puts "Comedy, Horror, Romance, Action, Science Fiction, Drama"
     # Ask user for movie category
-    puts "What category does your movie fall under?"
-    category = gets.chomp.downcase
+    puts "Please try to re-enter the movie with an appropriate category\n"
   # END
   end
+
+  puts "Press enter to continute adding movies or type done to finish"
+  input = gets.chomp
+
 end
+
+puts "Your movies have been added to your personal database!"
 
 # Repeat display method until user says exit
   # Ask user if they would like to view their lists
