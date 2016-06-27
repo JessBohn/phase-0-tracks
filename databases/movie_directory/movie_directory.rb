@@ -121,15 +121,25 @@ until input == "done"
     # Insert information into comedy table
     db.execute("INSERT INTO comedy (title, director, release_year, category) VALUES (?, ?, ?, ?)", [title, director, release_year, "Comedy" ])
   # ELSIF horror
+  elsif category == "horror"
     # Insert information into horror table
+    db.execute("INSERT INTO horror (title, director, release_year, category) VALUES (?, ?, ?, ?)", [title, director, release_year, "Horror" ])
   # ELSIF romance
+  elsif category == "romance"
     # Insert information into romance table
+    db.execute("INSERT INTO romance (title, director, release_year, category) VALUES (?, ?, ?, ?)", [title, director, release_year, "Romance" ])
   # ELSIF action
+  elsif category == "action"
     # Insert information into action table
+    db.execute("INSERT INTO action (title, director, release_year, category) VALUES (?, ?, ?, ?)", [title, director, release_year, "Action" ])
   # ELSIF scifi
+  elsif category == "sci-fi"
     # Insert information into scifi table
+    db.execute("INSERT INTO sci-fi (title, director, release_year, category) VALUES (?, ?, ?, ?)", [title, director, release_year, "Science Fiction" ])
   # ELSIF drama
+  elsif category == "drama"
     # Insert information into drama table
+    db.execute("INSERT INTO drama (title, director, release_year, category) VALUES (?, ?, ?, ?)", [title, director, release_year, "Drama" ])
   # ELSE
   else
     # Tell user category unknown
