@@ -93,7 +93,8 @@ db.execute(create_drama_cmd)
 #USER INPUT
 
 # Run movie data collection until user enters done
-
+input = ""
+until input == "done"
   # Ask user for category of movie to be entered into collection
   puts "What is the category of the movie?"
   # Collect and covert category to lowercase letters
@@ -107,6 +108,9 @@ db.execute(create_drama_cmd)
   # Collect release date from user and convert to a number
   puts "What year was this movie released?"
   release_year = gets.chomp.to_i
+  puts "Your movie has been added to your personal database! Press enter to continute adding movies or type done to finish"
+  input = gets.chomp
+end
 
   # IF comedy
     # Insert information into comedy table
