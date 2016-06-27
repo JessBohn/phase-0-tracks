@@ -89,17 +89,17 @@ SQL6
 input = ""
 until input == "done"
   # Ask user for category of movie to be entered into collection
-  puts "What is the category of the movie?"
+  print "What is the category of the movie? "
   # Collect and covert category to lowercase letters
   category = gets.chomp.downcase
   # Collect movie title from user
-  puts "What is the title of the movie?"
+  print "What is the title of the movie? "
   title = gets.chomp
   # Collect movie director from user
-  puts "What is the name of this movie's director?"
+  print "What is the name of this movie's director? "
   director = gets.chomp
   # Collect release date from user and convert to a number
-  puts "What year was this movie released?"
+  print "What year was this movie released? "
   release_year = gets.chomp.to_i
 
   # IF comedy
@@ -145,7 +145,8 @@ until input == "done"
     # List available categories
     puts "Comedy, Horror, Romance, Action, Science Fiction, Drama"
     # Ask user for movie category
-    puts "Please try to re-enter the movie with an appropriate category\n"
+    puts "Please try to re-enter the movie with an appropriate category"
+    puts ""
   # END
   end
 
