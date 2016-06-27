@@ -160,55 +160,64 @@ puts "Your movies have been added to your personal database!"
 # Ask user if they would like to view their lists
 print "Would you like to view your movies?"
 view_movies = gets.chomp.downcase
-# Repeat display method until user says exit
-  # IF yes
-  if view_movies == "yes"
-    # Ask which category they would like to see
-    print "Which category would you like to view?"
-    category = gets.chomp.downcase
-    # IF all
-    # if category == "all"
-      # Display all
 
-    # ELSIF comedy
-    if category == "comedy"
-      # display comedy table
-      output = db.execute("SELECT * FROM comedy")
-      puts "#{output}"
-    # ELSIF horror
-    elsif category == "horror"
-      # display horror table
-      output = db.execute("SELECT * FROM horror")
-      puts "#{output}"
-    # ELSIF romance
-    elsif category == "romance"
-      # display romance table
-      output = db.execute("SELECT * FROM romance")
-      puts "#{output}"
-    # ELSIF action
-    elsif category == "action"
-      # display action
-      output = db.execute("SELECT * FROM action")
-      puts "#{output}"
-    # ELSIF scifi table
-    elsif category == "sci-fi"
-      # display scifi table
-      output = db.execute("SELECT * FROM scifi")
-      puts "#{output}"
-    # ELSIF drama
-    elsif category == "drama"
-      # display drama table
-      output = db.execute("SELECT * FROM drama")
-      puts "#{output}"
-    # ELSE
-    else
-      # Tell them to pick one of the categories or say all
-      puts "Please pick one of the available categories to view"
-    # END
+  # IF yes
+  input = ""
+  if view_movies == "yes"
+    # Repeat display method until user says exit
+    viewed_data = true
+    until input == "exit"
+    # Ask which category they would like to see
+      print "Which category would you like to view?"
+      category = gets.chomp.downcase
+      # IF all
+      # if category == "all"
+        # Display all
+
+      # ELSIF comedy
+      if category == "comedy"
+        # display comedy table
+        output = db.execute("SELECT * FROM comedy")
+        puts "#{output}"
+      # ELSIF horror
+      elsif category == "horror"
+        # display horror table
+        output = db.execute("SELECT * FROM horror")
+        puts "#{output}"
+      # ELSIF romance
+      elsif category == "romance"
+        # display romance table
+        output = db.execute("SELECT * FROM romance")
+        puts "#{output}"
+      # ELSIF action
+      elsif category == "action"
+        # display action
+        output = db.execute("SELECT * FROM action")
+        puts "#{output}"
+      # ELSIF scifi table
+      elsif category == "sci-fi"
+        # display scifi table
+        output = db.execute("SELECT * FROM scifi")
+        puts "#{output}"
+      # ELSIF drama
+      elsif category == "drama"
+        # display drama table
+        output = db.execute("SELECT * FROM drama")
+        puts "#{output}"
+      # ELSE
+      else
+        # Tell them to pick one of the categories or say all
+        
+      # END
+      end
+      puts "Press enter to view more data or type exit to finish viewing"
+      input = gets.chomp
     end
   else
-
+    viewed_data = false
   end
+
+ 
 
 
 
