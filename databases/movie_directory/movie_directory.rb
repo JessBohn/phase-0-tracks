@@ -158,7 +158,7 @@ puts "Your movies have been added to your personal database!"
 
 
 # Ask user if they would like to view their lists
-print "Would you like to view your movies?"
+print "Would you like to view your movies? "
 view_movies = gets.chomp.downcase
 
   # IF yes
@@ -168,13 +168,9 @@ view_movies = gets.chomp.downcase
     viewed_data = true
     until input == "exit"
     # Ask which category they would like to see
-      print "Which category would you like to view?"
+      print "Which category would you like to view? "
       category = gets.chomp.downcase
-      # IF all
-      # if category == "all"
-        # Display all
-
-      # ELSIF comedy
+      # IF comedy
       if category == "comedy"
         # display comedy table
         output = db.execute("SELECT * FROM comedy")
@@ -206,9 +202,7 @@ view_movies = gets.chomp.downcase
         puts "#{output}"
       # ELSE
       else
-        # Tell them to pick one of the categories or say all
-        
-      # END
+      
       end
       puts "Press enter to view more data or type exit to finish viewing"
       input = gets.chomp
@@ -216,6 +210,48 @@ view_movies = gets.chomp.downcase
   else
     viewed_data = false
   end
+
+# IF user viewed any of the tables
+if viewed_data
+  # Ask user if all information is correct
+  print "Is all of the information displayed above, correct? "
+  correct_data = gets.chomp.downcase
+  # IF data is not correct
+  if correct_data == "no"
+    # Ask user for category and title of incorrect data
+    print "Please provide the category where the incorrect information is located: "
+    category = gets.chomp.downcase
+    if category == "sci-fi" then category = "scifi" end
+    print "Please provide the title for which the information is incorrect: "
+    title = gets.chomp
+    title = title.delete("\n")
+    # Ask which data piece is incorrect and the correction
+    print "Which piece of information is incorrect? "
+    wrong_data = gets.chomp.downcase
+    if wrong_data == "release year" then wrong_data = "release_year" end
+    print "What is the corresponding correct information? "
+    new_data = gets.chomp
+    if new_data.is_a?(String) then 
+      data_correction = <<-SQLUPD
+      UPDATE #{category} SET #{wrong_data}='#{new_data}' WHERE title='#{title}'
+    SQLUPD
+    end 
+    
+    # update appropriate data
+    # data_correction = <<-SQLUPD
+    #   UPDATE #{category} SET #{wrong_data}=#{new_data} WHERE title='#{title}'
+    # SQLUPD
+    db.execute(data_correction)
+  # ELSE
+  else
+    # do nothing
+  end
+# ELSE
+else
+  # do nothing
+end
+
+# Coongratulate user on their new personal movie database
 
  
 
