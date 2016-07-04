@@ -1,7 +1,16 @@
 console.log("Hello world");
 
-var intro = document.getElementsByClassName("intro");
+var paras = document.getElementsByTagName("p");
 
-intro[0].style.border = "3px solid red";
-intro[0].style.font_weight="bold";
+var photo = document.getElementById("logo");
 
+photo.style.border = "3px solid red";
+
+function changeBackgroundColor(event) {
+  console.log("It worked!");
+  event.target.style.color="#ffff65";
+}
+
+var info = document.getElementsByClassName("backgroundinfo");
+var backgroundinfo = info[0];
+backgroundinfo.addEventListener("click", changeBackgroundColor);
