@@ -11,9 +11,22 @@
   <header>
     <img src="http://i3.cpcache.com/product/1490105293/lambda_fraternity_sticker.jpg?height=225&width=225" id="logo" alt="logo">
   </header>
-  <script src="../../jquery.js"></script>
+  <script src="jquery.js"></script>
   <script>
+    $(function() {
+      $("body").on('click', function() {
+        $("aside").fadeToggle(200);
+      });
 
+      $("#logo").hover(function() {
+        $(this).hide();
+      });
+
+      $("body").click(function() {
+        $("#logo").show();
+      });
+      
+    });
   </script>
   <h3>My fan story</h3>
   <p class="intro" id="intro-para">
