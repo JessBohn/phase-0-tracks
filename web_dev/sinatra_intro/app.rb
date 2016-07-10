@@ -46,6 +46,15 @@ get '/:person_1/loves/:person_2' do
   "#{params[:person_1]} loves #{params[:person_2]}"
 end
 
+# Release 0 - Question 3
+# write a GET route that takes to numbers as route parameters
+# and adds them together
+# displays the result
+get '/:num_1/+/:num_2' do
+  result =  params[:num_1].to_i + params[:num_2].to_i
+  "#{params[:num_1]} + #{params[:num_2]} = #{result}"
+end
+
 # write a GET route that retrieves
 # all student data
 get '/students' do
