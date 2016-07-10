@@ -10,8 +10,22 @@ db.results_as_hash = true
 # write a basic GET route
 # add a query parameter
 # GET /
+
+# Release 0 - Question 1
+get '/contact' do
+  "Dev Bootcamp - Austin Campus<br>
+  1705 Guadalupe St<br>
+  1st Floor<br>
+  Austin, TX 78701"
+end
+
 get '/' do
   "#{params[:name]} is #{params[:age]} years old."
+end
+
+# Release 0 - Question 2
+get '/great_job' do
+  "#{params[:name]} is doing a great job!"
 end
 
 # write a GET route with
@@ -23,13 +37,6 @@ end
 
 get '/:person_1/loves/:person_2' do
   "#{params[:person_1]} loves #{params[:person_2]}"
-end
-
-get '/contact' do
-  "Dev Bootcamp - Austin Campus<br>
-  1705 Guadalupe St<br>
-  1st Floor<br>
-  Austin, TX 78701"
 end
 
 # write a GET route that retrieves
