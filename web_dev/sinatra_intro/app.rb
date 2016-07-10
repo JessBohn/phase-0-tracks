@@ -25,7 +25,14 @@ end
 
 # Release 0 - Question 2
 get '/great_job' do
-  "#{params[:name]} is doing a great job!"
+  name = params[:name]
+  # Takes person's name as a query parameter and display message using their name
+  if name
+    "Good job, #{params[:name]}!"
+  # If no name is given, simply puts good job
+  else
+    "Good job!"
+  end
 end
 
 # write a GET route with
