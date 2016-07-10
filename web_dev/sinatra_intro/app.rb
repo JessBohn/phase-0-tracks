@@ -2,6 +2,7 @@
 require "sinatra"
 require "sinatra/reloader"
 require "sqlite3"
+require 'shotgun'
 
 db = SQLite3::Database.new("students.db")
 db.results_as_hash = true
@@ -25,10 +26,10 @@ get '/:person_1/loves/:person_2' do
 end
 
 get '/contact' do
-  "Dev Bootcamp Austion"
-  "1705 Guadalupe St"
-  "1st Floor"
-  "Austin, TX 78701"
+  "Dev Bootcamp - Austin Campus<br>
+  1705 Guadalupe St<br>
+  1st Floor<br>
+  Austin, TX 78701"
 end
 
 # write a GET route that retrieves
